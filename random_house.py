@@ -9,8 +9,8 @@ birchwood = 17
 bricks = 45
 cobblestone = 4
 diamondBlock = 57
-flowingLava = 10
-flowingWater = 8
+flowingLava = 10            # These may give us an error
+flowingWater = 8            #
 glass = 20
 glassPane = 102
 glassStained = 95  # use block type for colors
@@ -33,19 +33,32 @@ def clear_area(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset):
     mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, 0)
 
 
-def build_floor (x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
+def build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """ build floor at altitude y_corner using the block ID and block type attributes """
-    mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner +z_offset, block_type)
+    mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset,
+                 block_type)
 
 
-def build_walls (x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type):
+def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type):
     """ build a wall starting at x_corner, y_corner, z_corner using the requested block_type attribute.
         This module will ask if player wants 0 to 2 doors.  Any doors will be placed in the middle of the wall.
-        This module will ask if player wants 0 to 2 windows.  Windows will be centered on the left or right half of wall."""
-    pass
+        This module will ask if player wants 0 to 2 windows.  Windows will be centered on the left or right half of
+        wall."""
+    doors = int(input("Would you like 0, 1, or 2 doors?"))
+    mc.postToChat(doors)
+    if doors == 2:
+        pass
+    elif doors == 1:
+        if z_offset == 0:
+            door_offset = x_offset / 2
+            mc.setBlocks()
+    elif doors == 0:
+        mc.postToChat("Have fun with your doorless house!")
+    else:
+        mc.postToChat("Go touch some grass.")
 
 
-def build_stairs (x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
+def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """build stairs """
     pass
 
@@ -56,9 +69,9 @@ def main():
     print(position)
 
     # get one corner of the area to build a house.  We will be using floating point numbers
-    x_corner = float(position.x) + 1
+    x_corner = float(position.x) + 1.0
     y_corner = float(position.y)
-    z_corner = float(position.z) + 1
+    z_corner = float(position.z) + 1.0
 
     # clear an area of all blocks
     x_offset = 20.0
@@ -67,7 +80,7 @@ def main():
     clear_area(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset)
 
     # build the foundation for the house
-    foundation_block_id = 7
+    foundation_block_id = 46
     x_corner = float(position.x + 1)
     y_corner = float(position.y)
     z_corner = float(position.z + 1)
@@ -80,7 +93,6 @@ def main():
     block_id = bricks
     block_type = 0
     build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type)
-
 
     build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type)
 
