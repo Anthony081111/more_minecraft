@@ -1,5 +1,6 @@
 """This module will help us build a house."""
 from mcpi.minecraft import Minecraft
+from stevetest import build_walls
 import time
 mc = Minecraft.create()
 
@@ -39,11 +40,11 @@ def build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
                  block_type)
 
 
-def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type):
-    """ build a wall starting at x_corner, y_corner, z_corner using the requested block_type attribute.
+"""def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type):
+    """""" build a wall starting at x_corner, y_corner, z_corner using the requested block_type attribute.
         This module will ask if player wants 0 to 2 doors.  Any doors will be placed in the middle of the wall.
         This module will ask if player wants 0 to 2 windows.  Windows will be centered on the left or right half of
-        wall."""
+        wall.""""""
     doors = int(input("Would you like 0, 1, or 2 doors?"))
     mc.postToChat(doors)
     if doors == 2:
@@ -57,7 +58,7 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
     else:
         mc.postToChat("Go touch some grass.")
 
-
+"""
 def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """build stairs """
     pass
@@ -69,29 +70,45 @@ def main():
     print(position)
 
     # get one corner of the area to build a house.  We will be using floating point numbers
-    x_corner = float(position.x) + 1.0
+    """x_corner = float(position.x) + 1.0
     y_corner = float(position.y)
-    z_corner = float(position.z) + 1.0
+    z_corner = float(position.z) + 1.0"""
 
+    x_corner = 171
+    y_corner = -8
+    z_corner = -243
+    mc.player.setTilePos(x_corner, y_corner, z_corner)
     # clear an area of all blocks
     x_offset = 20.0
     y_offset = 20.0
     z_offset = 20.0
+    x_corner = x_corner + 1
+    y_corner = y_corner
+    z_corner = z_corner + 1
     clear_area(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset)
 
     # build the foundation for the house
-    foundation_block_id = 46
-    x_corner = float(position.x + 1)
+    foundation_block_id = 133
+    """x_corner = float(position.x + 1)
     y_corner = float(position.y)
-    z_corner = float(position.z + 1)
+    z_corner = float(position.z + 1)"""
+    x_corner = x_corner + 1
+    y_corner = y_corner
+    z_corner = z_corner + 1
     x_offset = 20.0
-    y_offset = 20.0
+    y_offset = 0.0
     z_offset = 20.0
     build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, foundation_block_id)
-
+    x_corner = x_corner + 1
+    y_corner = y_corner + 1
+    z_corner = z_corner + 1
+    x_offset = 10.0
+    y_offset = 3.0
+    z_offset = 10.0
     # build the 4 wall of the house
     block_id = bricks
     block_type = 0
+
     build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type)
 
     build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type)
