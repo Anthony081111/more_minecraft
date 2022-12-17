@@ -161,53 +161,39 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             mc.postToChat("Would you like 0 1 or 2 windows")
             windows = int(input("Would you like 0, 1, or 2 windows?"))
             mc.postToChat(windows)
-            if windows >= 0 or windows >= 2:
+            if windows == 0 or windows == 2 or windows == 1:
                 input_flag = False
+            else:
+                input_flag = True
 
         if (doors == 1 or doors == 2) and wall_direction == 1 and windows == 1 and x_offset > 3:
             window_location = roundDown(x_offset / 4)
-            mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 102)
+            mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
         elif (doors == 1 or doors == 2) and wall_direction == 1 and windows == 2 and x_offset > 4:
             window_location = roundDown(x_offset / 4)
-            mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 102)
-            mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner, 102)
-
-        """ elif doors == 1 and wall_direction == 2 and x_offset > 3:
-            door_location = roundDown(x_offset / 2)
-            mc.setBlocks(x_corner + door_location, y_corner, z_corner + z_offset,
-                        x_corner + door_location, y_corner + 1, z_corner + z_offset,
-                        64, 0)
-        elif doors == 2 and wall_direction == 2 and x_offset > 3:
-            door_location = roundDown(x_offset / 2)
-            mc.setBlocks(x_corner + door_location, y_corner, z_corner + z_offset,
-                         x_corner + door_location + 1, y_corner + 1, z_corner + z_offset,
-                         64, 0)
-        elif doors == 1 and wall_direction == 3 and z_offset > 3:
-            door_location = roundDown(z_offset / 2)
-            mc.setBlocks(x_corner, y_corner, z_corner + door_location,
-                         x_corner, y_corner + 1, z_corner + door_location,
-                         64, 0)
-        elif doors == 2 and wall_direction == 3 and z_offset > 3:
-            door_location = roundDown(z_offset / 2)
-            mc.setBlocks(x_corner, y_corner, z_corner + door_location,
-                         x_corner, y_corner + 1, z_corner + door_location + 1,
-                         64, 0)
-        elif doors == 1 and wall_direction == 4 and z_offset > 3:
-            door_location = roundDown(z_offset / 2)
-            mc.setBlocks(x_corner + x_offset, y_corner, z_corner + door_location,
-                         x_corner + x_offset, y_corner + 1, z_corner + door_location,
-                         64, 0)
-        elif doors == 2 and wall_direction == 4 and z_offset > 3:
-            door_location = roundDown(z_offset / 2)
-            mc.setBlocks(x_corner + x_offset, y_corner, z_corner + door_location,
-                         x_corner + x_offset, y_corner + 1, z_corner + door_location +1,
-                         64, 0)
-        elif doors == 0:
-            mc.postToChat("Have fun with your doorless wall!")
-        else:
-            mc.postToChat("Go touch some grass.")
-        """
-
+            mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
+            mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner, 20)
+        if (doors == 1 or doors == 2) and wall_direction == 2 and windows == 1 and x_offset > 3:
+            window_location = roundDown(x_offset / 4)
+            mc.setBlock(x_corner + window_location, y_corner + 1, z_corner + z_offset, 20)
+        elif (doors == 1 or doors == 2) and wall_direction == 2 and windows == 2 and x_offset > 4:
+            window_location = roundDown(x_offset / 4)
+            mc.setBlock(x_corner + window_location, y_corner + 1, z_corner + z_offset, 20)
+            mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner + z_offset, 20)
+        if (doors == 1 or doors == 2) and wall_direction == 3 and windows == 1 and x_offset > 3:
+            window_location = roundDown(x_offset / 4)
+            mc.setBlock(x_corner, y_corner + 1, z_corner + window_location, 20)
+        elif (doors == 1 or doors == 2) and wall_direction == 3 and windows == 2 and x_offset > 4:
+            window_location = roundDown(x_offset / 4)
+            mc.setBlock(x_corner, y_corner + 1, z_corner + window_location, 20)
+            mc.setBlock(x_corner, y_corner + 1, z_corner + z_offset - window_location, 20)
+        if (doors == 1 or doors == 2) and wall_direction == 4 and windows == 1 and x_offset > 3:
+            window_location = roundDown(x_offset / 4)
+            mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset + window_location, 20)
+        elif (doors == 1 or doors == 2) and wall_direction == 4 and windows == 2 and x_offset > 4:
+            window_location = roundDown(x_offset / 4)
+            mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + window_location, 20)
+            mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset - window_location, 20)
         # Determine if more work is to be done on walls
         mc.postToChat("Do you want to continue building or re-building walls y or n")
         more_walls = input("do you want to continue building or re-building walls? y or n ---  ")
@@ -223,15 +209,15 @@ def main():
     # Find the location of the player
     position = mc.player.getTilePos()
     #Anthonys Dec 3  location
-    # position.x = 394
-    # position.y = 1y
+    position.x = 394
+    position.y = 1
 
-    # position.z = 48
+    position.z = 48
 
     # Steve's Dec 17 location of the player
-    position.x = 269
+    """position.x = 269
     position.y = -26
-    position.z = 126
+    position.z = 126"""
 
     mc.player.setTilePos(position.x, position.y, position.z)
 
