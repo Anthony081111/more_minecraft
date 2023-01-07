@@ -253,9 +253,9 @@ def main():
     block_id = bricks
     block_type = 0
     build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type)
-    build_floor(x_corner, y_corner + 4, z_corner, x_offset, y_offset, z_offset, foundation_block_id)
+    build_floor(x_corner, y_corner + 4, z_corner, x_offset, y_offset, z_offset, oakWood)
     # build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type)
 
-
+1
 if __name__ == "__main__":
     main()
