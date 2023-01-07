@@ -143,8 +143,6 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         else:
             mc.postToChat("Go touch some grass.")
 
-
-
         # Place windows in walls
         # Walls need to be wide enough to allow doors and windows
         #    example 1: wall must be at least 3 blocks wide for 1 window
@@ -155,7 +153,6 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             input_flag = True
         if wall_direction == 3 or wall_direction == 4 and x_offset > 3:
             input_flag = True
-
 
         while input_flag:
             mc.postToChat("Would you like 0 1 or 2 windows")
@@ -200,6 +197,7 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         if more_walls != "y":
             wall_flag = False
 
+
 def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """build stairs """
     pass
@@ -208,7 +206,7 @@ def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, blo
 def main():
     # Find the location of the player
     position = mc.player.getTilePos()
-    #Anthonys Dec 3  location
+    # Anthony's Dec 3  location
     position.x = 394
     position.y = 1
 
@@ -222,8 +220,6 @@ def main():
     mc.player.setTilePos(position.x, position.y, position.z)
 
     print(position)
-
-
 
     # clear an area of all blocks
     x_offset = 20.0
@@ -256,6 +252,6 @@ def main():
     build_floor(x_corner, y_corner + 4, z_corner, x_offset, y_offset, z_offset, oakWood)
     # build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type)
 
-1
+
 if __name__ == "__main__":
     main()
