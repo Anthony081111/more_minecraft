@@ -54,11 +54,13 @@ def build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             door_offset = x_offset / 2
             mc.setBlocks()
     elif doors == 0:
-        mc.postToChat("Have fun with your doorless house!")
+        mc.postToChat("Have fun with your box!")
     else:
         mc.postToChat("Go touch some grass.")
 
 """
+
+
 def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """build stairs """
     pass
@@ -74,9 +76,9 @@ def main():
     y_corner = float(position.y)
     z_corner = float(position.z) + 1.0"""
 
-    x_corner = 171
-    y_corner = -8
-    z_corner = -243
+    x_corner = 1008
+    y_corner = 6
+    z_corner = -9069
     mc.player.setTilePos(x_corner, y_corner, z_corner)
     # clear an area of all blocks
     x_offset = 20.0
@@ -110,7 +112,7 @@ def main():
     block_type = 0
 
     build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type)
-
+    build_floor(x_corner, y_corner + y_offset, z_corner, x_offset, 0, z_offset, foundation_block_id)
     build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type)
 
 
