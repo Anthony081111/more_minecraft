@@ -19,3 +19,13 @@ if crater_or_possibly_nothing == "y":
     st.clear_area(x+1, y, z+1, x_offset, y_offset, z_offset)
 else:
     pass
+
+grass_floor_or_floor = input("Do you want a floor?(y/n)")
+if grass_floor_or_floor == "y":
+    st.build_floor(x, y, z, x_offset, y_offset, z_offset, 123)
+else:
+    pass
+y_offset = 4
+unprotected_or_protected = input("Would you like some walls?(y/n)")
+if unprotected_or_protected == "y":
+    st.build_walls(x, y, z, x_offset, y_offset, z_offset, 7, 2)

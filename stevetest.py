@@ -71,11 +71,11 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         if wall_direction == 1:
             mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner, block_id)
         elif wall_direction == 2:
-            mc.setBlocks(x_corner, y_corner, z_corner + z_offset, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, 45)
+            mc.setBlocks(x_corner, y_corner, z_corner + z_offset, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, block_id)
         elif wall_direction == 3:
-            mc.setBlocks(x_corner, y_corner, z_corner, x_corner, y_corner + y_offset, z_corner + z_offset, 45)
+            mc.setBlocks(x_corner, y_corner, z_corner, x_corner, y_corner + y_offset, z_corner + z_offset, block_id)
         else:
-            mc.setBlocks(x_corner + x_offset, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset,45)
+            mc.setBlocks(x_corner + x_offset, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, block_id)
 
 
 
