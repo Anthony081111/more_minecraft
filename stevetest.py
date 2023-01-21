@@ -1,6 +1,8 @@
 """This module will help us build a house."""
 from mcpi.minecraft import Minecraft
 import time
+import os
+
 mc = Minecraft.create()
 
 air = 0
@@ -201,6 +203,20 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
 def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """build stairs """
     pass
+
+
+def save_coordinates(x, y, z, description):
+    # open file or create file if it does not already exist
+    try:
+        file_size = os.getsize('coordinates_file.txt')
+        coord_file = open('coordinates_file.txt', 'a')
+    except:
+        # this probably means the file does not exist
+        # coord_file = open('coordinates_file.txt', 'a')
+        print(' File does not exist ')
+
+    # read file to see if description is already in file
+
 
 
 def main():
