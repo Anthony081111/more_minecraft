@@ -1,9 +1,9 @@
+import pandas as pd
+import os
 """this module contains functions to read or write minecraft coordinates in coordinates_file.cvs"""
 
 """pandas is a Python package providing fast, flexible, and expressive data structures 
 designed to make working with “relational” or “labeled” data both easy and intuitive. """
-import pandas as pd
-import os
 
 
 def save_coordinates(description, x, y, z):
@@ -71,7 +71,7 @@ def get_coordinates(description):
         # file exists so read the file into a pandas data frame
         df = pd.read_csv(coord_file)
         df.set_index(['coord_description'], inplace=True)
-        print('line 77')
+        print('line 74')
         data_df = df.loc[description, :]
         return data_df
 
@@ -83,7 +83,7 @@ def get_coordinates(description):
 
 
 if __name__ == '__main__':
-    save_coordinates("test1", 1, 1, 1)
+    save_coordinates("test1", 2, 2, 2)
     save_coordinates("test2", 220, 20, 230)
     """save_coordinates("test3", 30, 320, 330)
     save_coordinates("test4", 40, 420, 430)
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     save_coordinates("test6", 60, 620, 630)
     save_coordinates("test3", 70, 720, 730)
     save_coordinates("test4", 8, 820, 830)"""
-    coord_line_df = get_coordinates("test2")
+    coord_line_df = get_coordinates("test1")
     # print('line 105', coord_line_df)
     # if coord_line_df.loc['coord_description', : ] == 'file does not exist':
     #     print('file does not exist')
