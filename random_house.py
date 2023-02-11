@@ -1,6 +1,6 @@
 """This module will help us build a house."""
 from mcpi.minecraft import Minecraft
-from stevetest import build_walls
+from walls_floors_and_ceilings_that_are_really_floors import build_walls
 import time
 mc = Minecraft.create()
 

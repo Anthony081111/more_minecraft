@@ -1,43 +1,39 @@
 from mcpi.minecraft import Minecraft
-import stevetest as st
+import walls_floors_and_ceilings_that_are_really_floors as wfac
 import minecraft_coordinates as minecoor
+import WHERE_ARE_MY_STUPID_COORDINATES as whereCoord
 mc = Minecraft.create()
 
-saved_location_or_maybe_not = input("Do you want to save your location?(y/n) ")
-if saved_location_or_maybe_not == "y":
-    position = mc.player.getTilePos()
-    mc.postToChat(position)
-    x = position.x
-    y = position.y
-    z = position.z
-    description = input("What is your location name? ")
-    minecoor.save_coordinates(description, x, y, z)
-else:
-    travel_to_saved_location_or_maybe_not = input("Do you want to travel to a previous location?(y/n) ")
-    if travel_to_saved_location_or_maybe_not == "y":
-        description = input("Which location would you like to travel to? ")
-        df = minecoor.get_coordinates(description)
-        print(df)
-        x = int(df.loc["x_coord"])
-        y = int(df.loc["y_coord"])
-        z = int(df.loc["z_coord"])
-        mc.player.setTilePos(x, y, z)
-        quit()
+coordinates = whereCoord.return_coordinates()
+
+x = coordinates[0]
+y = coordinates[1]
+z = coordinates[2]
+# print(x, y, z)
+
 crater_or_possibly_nothing = input("Do you want to clear the area?(y/n) ")
+x_offset = 20
+y_offset = 150
+z_offset = 20
 if crater_or_possibly_nothing == "y":
-    x_offset = 20
-    y_offset = 150
-    z_offset = 20
-    st.clear_area(x+1, y, z+1, x_offset, y_offset, z_offset)
+    wfac.clear_area(x+1, y, z+1, x_offset, y_offset, z_offset)
 else:
     pass
 
 grass_floor_or_floor = input("Do you want a floor?(y/n) ")
 if grass_floor_or_floor == "y":
-    st.build_floor(x, y, z, x_offset, y_offset, z_offset, 123)
+    x_offset = 20
+    y_offset = 0
+    z_offset = 20
+    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 123)  # 123 is a redstone lamp(unlit)
 else:
     pass
 y_offset = 4
 unprotected_or_protected = input("Would you like some walls?(y/n)")
 if unprotected_or_protected == "y":
-    st.build_walls(x, y, z, x_offset, y_offset, z_offset, 7, 2)
+    wfac.build_walls(x, y, z, x_offset, y_offset, z_offset, 7, 2)  # 7 is a bed in a rock, 2 does nothing
+
+struck_by_lightening_or_maybe_not = input("Would you like a ceiling that is really just a floor?(y/n)")
+if struck_by_lightening_or_maybe_not == "y":
+    # y_offset += 4
+    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 179)  # 179 is red sandstone

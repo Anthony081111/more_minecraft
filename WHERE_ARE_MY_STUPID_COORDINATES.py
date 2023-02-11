@@ -17,6 +17,20 @@ def list_coordinate_names():
         exit()
 
 
+def return_coordinates():
+    data_frame = list_coordinate_names()
+    while True:
+        coordinate_name = input("What is your randomé coordinate name?(CaSE SenSITIvE)")
+        if coordinate_name in data_frame.values:
+            coordinates = get_coordinates(coordinate_name, data_frame)
+            x = coordinates._get_value(0, "x_coord")
+            y = coordinates._get_value(0, "y_coord")
+            z = coordinates._get_value(0, "z_coord")
+            position = [coordinates.x_coord, coordinates.y_coord, coordinates.z_coord]
+            mc.player.setTilePos(position)
+            return x, y, z
+
+
 def get_coordinates(coordinate_names, a_df):
     coordinates = a_df.loc[a_df.coord_description == coordinate_names]
     return coordinates

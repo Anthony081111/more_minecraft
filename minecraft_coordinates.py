@@ -63,45 +63,8 @@ def save_coordinates(description, x, y, z):
         return
 
 
-def get_coordinates(description):
-    # This function returns the description and coordinates if they are in the coord_file
-    coord_file = "coordinates_file.csv"
-
-    # test to see if file exists
-    if os.path.isfile(coord_file):
-        # file exists so read the file into a pandas data frame
-        df = pd.read_csv(coord_file)
-        df.set_index(['coord_description'], inplace=True)
-        print('line 74')
-        data_df = df.loc[description, :]
-        return data_df
-
-    else:
-        print('file does not exist')
-        dict = {'x_coord': [0], 'y_coord': [0], 'z_coord': [0]}
-        df = pd.DataFrame(dict)
-        return df
-
-
 if __name__ == '__main__':
-    """ save_coordinates("test1", 2, 2, 2)
-    save_coordinates("test2", 220, 20, 230)
-    save_coordinates("test3", 30, 320, 330)
-    save_coordinates("test4", 40, 420, 430)
-    save_coordinates("test5", 50, 520, 530)
-    save_coordinates("test6", 60, 620, 630)
-    save_coordinates("test3", 70, 720, 730)
-    save_coordinates("test4", 8, 820, 830)
-    coord_line_df = get_coordinates("test1")
-    # print('line 105', coord_line_df)
-    # if coord_line_df.loc['coord_description', : ] == 'file does not exist':
-    #     print('file does not exist')
-    # else:
-    x = coord_line_df.loc['x_coord']
-    y = coord_line_df.loc['y_coord']
-    z = coord_line_df.loc['z_coord']
-    print(f"I'm at line 100 and x =   {x}     y =     {y}     z =   {z}")"""
-
+    # Find the coordinates of the player
     position = mc.player.getTilePos()
     x = position.x
     y = position.y

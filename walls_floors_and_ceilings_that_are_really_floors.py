@@ -41,7 +41,7 @@ def clear_area(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset):
 
 def build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
     """ build floor at altitude y_corner using the block ID and block type attributes """
-    mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner, z_corner + z_offset,
+    mc.setBlocks(x_corner, y_corner + y_offset, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset,
                  block_type)
 
 
