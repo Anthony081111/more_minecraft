@@ -1,10 +1,11 @@
-import pandas as pd
-import os
 """this module contains functions to read or write minecraft coordinates in coordinates_file.cvs"""
 
 """pandas is a Python package providing fast, flexible, and expressive data structures 
 designed to make working with “relational” or “labeled” data both easy and intuitive. """
-
+from mcpi.minecraft import Minecraft
+import pandas as pd
+import os
+mc = Minecraft.create()
 
 def save_coordinates(description, x, y, z):
     # This function saves a description of the coordinates and the coordinates
@@ -83,14 +84,14 @@ def get_coordinates(description):
 
 
 if __name__ == '__main__':
-    save_coordinates("test1", 2, 2, 2)
+    """ save_coordinates("test1", 2, 2, 2)
     save_coordinates("test2", 220, 20, 230)
-    """save_coordinates("test3", 30, 320, 330)
+    save_coordinates("test3", 30, 320, 330)
     save_coordinates("test4", 40, 420, 430)
     save_coordinates("test5", 50, 520, 530)
     save_coordinates("test6", 60, 620, 630)
     save_coordinates("test3", 70, 720, 730)
-    save_coordinates("test4", 8, 820, 830)"""
+    save_coordinates("test4", 8, 820, 830)
     coord_line_df = get_coordinates("test1")
     # print('line 105', coord_line_df)
     # if coord_line_df.loc['coord_description', : ] == 'file does not exist':
@@ -99,4 +100,11 @@ if __name__ == '__main__':
     x = coord_line_df.loc['x_coord']
     y = coord_line_df.loc['y_coord']
     z = coord_line_df.loc['z_coord']
-    print(f"I'm at line 100 and x =   {x}     y =     {y}     z =   {z}")
+    print(f"I'm at line 100 and x =   {x}     y =     {y}     z =   {z}")"""
+
+    position = mc.player.getTilePos()
+    x = position.x
+    y = position.y
+    z = position.z
+    txt = input('Provide a description of this location:    ')
+    save_coordinates(txt, x, y, z)
