@@ -5,25 +5,27 @@ import WHERE_ARE_MY_STUPID_COORDINATES as whereCoord
 mc = Minecraft.create()
 
 coordinates = whereCoord.return_coordinates()
-
+print(coordinates)
 x = coordinates[0]
 y = coordinates[1]
 z = coordinates[2]
-# print(x, y, z)
+# print("hi")
+x += 1
+z += 1
 
 crater_or_possibly_nothing = input("Do you want to clear the area?(y/n) ")
 x_offset = 20
 y_offset = 150
 z_offset = 20
 if crater_or_possibly_nothing == "y":
-    wfac.clear_area(x+1, y, z+1, x_offset, y_offset, z_offset)
+    wfac.clear_area(x, y, z, x_offset, y_offset, z_offset)
 else:
     pass
 
 grass_floor_or_floor = input("Do you want a floor?(y/n) ")
 if grass_floor_or_floor == "y":
     x_offset = 20
-    y_offset = 0
+    y_offset = -1
     z_offset = 20
     wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 123)  # 123 is a redstone lamp(unlit)
 else:
