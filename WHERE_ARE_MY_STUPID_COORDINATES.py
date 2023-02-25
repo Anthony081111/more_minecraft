@@ -48,9 +48,5 @@ if __name__ == "__main__":
             mc.player.setTilePos(position)
             exit()
 
-
-
-
-
     # position = mc.player.getTilePos()
     # mc.postToChat(position)
