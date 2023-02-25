@@ -25,14 +25,23 @@ if grass_floor_or_floor == "y":
     x_offset = 20
     y_offset = -1
     z_offset = 20
-    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 123)  # 123 is a redstone lamp(unlit)
+    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 124)  # 124 is a redstone lamp(lit)
 else:
     pass
 y_offset = 4
 unprotected_or_protected = input("Would you like some walls?(y/n)")
 if unprotected_or_protected == "y":
-    wfac.build_walls(x, y, z, x_offset, y_offset, z_offset, 7, 2)  # 7 is a bed in a rock, 2 does nothing
+    wfac.build_walls(x, y, z, x_offset, y_offset, z_offset, 7)  # 7 is a bed in a rock, 2 does nothing
 
 struck_by_lightening_or_maybe_not = input("Would you like a ceiling that is really just a floor?(y/n)")
 if struck_by_lightening_or_maybe_not == "y":
-    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 179)  # 179 is red sandstone
+    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 179)  # 179 is red sand in a stone
+
+tall_house_or_maybe_not = input("Would you like another floor?")
+if tall_house_or_maybe_not == "y":
+    wfac.build_stairs(108, x+z_offset-5, y, z+z_offset-1, x_offset, y_offset, z_offset, 5)
+    y += 5
+    wfac.build_walls(x, y, z, x_offset, y_offset, z_offset, 24)    # 24 is sand in a stone
+    wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 124)   # 124 is a redstone lamp(lit)
+else:
+    pass

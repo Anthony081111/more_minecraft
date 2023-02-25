@@ -45,7 +45,7 @@ def build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
                  block_type)
 
 
-def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type):
+def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type=""):
     """ build a wall starting at x_corner, y_corner, z_corner using the requested block_type attribute.
 
     A wall must have an offset >= to 3 to have windows or doors
@@ -200,9 +200,11 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             wall_flag = False
 
 
-def build_stairs(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_type):
-    """build stairs """
-    pass
+def build_stairs(block_id3, x, y, z, x_offset, y_offset, z_offset, num_stairs, direction=None):
+    steps = 0
+    while steps < num_stairs:
+        mc.setBlock(x+steps, y+steps, z, block_id3)
+        steps += 1
 
 
 def save_coordinates(x, y, z, description):
