@@ -5,11 +5,9 @@ import WHERE_ARE_MY_STUPID_COORDINATES as whereCoord
 mc = Minecraft.create()
 
 coordinates = whereCoord.return_coordinates()
-print(coordinates)
 x = coordinates[0]
 y = coordinates[1]
 z = coordinates[2]
-# print("hi")
 x += 1
 z += 1
 
@@ -37,5 +35,4 @@ if unprotected_or_protected == "y":
 
 struck_by_lightening_or_maybe_not = input("Would you like a ceiling that is really just a floor?(y/n)")
 if struck_by_lightening_or_maybe_not == "y":
-    # y_offset += 4
     wfac.build_floor(x, y, z, x_offset, y_offset, z_offset, 179)  # 179 is red sandstone
