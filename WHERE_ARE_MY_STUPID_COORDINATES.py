@@ -50,3 +50,4 @@ if __name__ == "__main__":
 
     # position = mc.player.getTilePos()
     # mc.postToChat(position)
+print("why")
