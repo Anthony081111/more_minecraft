@@ -2,6 +2,7 @@
 from mcpi.minecraft import Minecraft
 import time
 import os
+import random
 
 mc = Minecraft.create()
 
@@ -45,7 +46,8 @@ def build_floor(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
                  block_type)
 
 
-def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, block_type=""):
+def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, block_id, grounded_floor_or_maybe_not,
+                block_type=""):
     """ build a wall starting at x_corner, y_corner, z_corner using the requested block_type attribute.
 
     A wall must have an offset >= to 3 to have windows or doors
@@ -60,15 +62,22 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         # determine which wall and direction we are building
         input_flag = True
         wall_direction = 0
-        while input_flag == True:
-            mc.postToChat("enter a number from 1 to 4 from this list to give direction of wall")
-            wall_direction = int(input("""enter a number from one to four from this list to give direction of wall
-                                          1 for x axis wall from x_corner,y_corner,z_corner                                 
-                                          2 for x axis wall from x_corner,y_corner,z_corner + z_offset
-                                          3 = z axis wall from x_corner,y_corner,z_corner
-                                          4 = z axis wall from x_corner + x_offset,y_corner,z_corner ---  """))
-            if wall_direction > 0 and wall_direction < 5:
-                input_flag = False
+        if grounded_floor_or_maybe_not:
+            while input_flag == True:
+                mc.postToChat("enter a number from 1 to 4 from this list to give direction of wall")
+                wall_direction = int(input("""enter a number from one to four from this list to give direction of wall
+                                              1 for x axis wall from x_corner,y_corner,z_corner                                 
+                                              2 for x axis wall from x_corner,y_corner,z_corner + z_offset
+                                              3 = z axis wall from x_corner,y_corner,z_corner
+                                              4 = z axis wall from x_corner + x_offset,y_corner,z_corner ---  """))
+                if wall_direction > 0 and wall_direction < 5:
+                    input_flag = False
+        else:
+            mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner, block_id)
+            mc.setBlocks(x_corner, y_corner, z_corner + z_offset, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, block_id)
+            mc.setBlocks(x_corner, y_corner, z_corner, x_corner, y_corner + y_offset, z_corner + z_offset, block_id)
+            mc.setBlocks(x_corner + x_offset, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, block_id)
+            wall_direction == 5
 
         if wall_direction == 1:
             mc.setBlocks(x_corner, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner, block_id)
@@ -76,10 +85,10 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             mc.setBlocks(x_corner, y_corner, z_corner + z_offset, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, block_id)
         elif wall_direction == 3:
             mc.setBlocks(x_corner, y_corner, z_corner, x_corner, y_corner + y_offset, z_corner + z_offset, block_id)
-        else:
+        elif wall_direction == 4:
             mc.setBlocks(x_corner + x_offset, y_corner, z_corner, x_corner + x_offset, y_corner + y_offset, z_corner + z_offset, block_id)
-
-
+        else:
+            pass
 
         # determine how many doors to put in the current wall
         # for a wall to have 1 or 2 doors the wall offset must be >= 4
@@ -92,13 +101,15 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             input_flag = False
 
         # Get number of doors for this wall
-        while input_flag:
-            mc.postToChat("Would you like 0 1 or 2 doors")
-            doors = int(input("Would you like 0, 1, or 2 doors?"))
-            mc.postToChat(doors)
-            if doors >= 0 and doors <= 4:
-                input_flag = False
-
+        if grounded_floor_or_maybe_not:
+            while input_flag:
+                mc.postToChat("Would you like 0 1 or 2 doors")
+                doors = int(input("Would you like 0, 1, or 2 doors?"))
+                mc.postToChat(doors)
+                if doors >= 0 and doors <= 4:
+                    input_flag = False
+        else:
+            doors = 0
         # place doors in wall
         if doors == 1 and wall_direction == 1 and x_offset > 3:
             door_location = roundDown(x_offset / 2)
@@ -156,40 +167,42 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         if wall_direction == 3 or wall_direction == 4 and x_offset > 3:
             input_flag = True
 
-        while input_flag:
-            mc.postToChat("Would you like 0 1 or 2 windows")
-            windows = int(input("Would you like 0, 1, or 2 windows?"))
-            mc.postToChat(windows)
-            if windows == 0 or windows == 2 or windows == 1:
-                input_flag = False
-            else:
-                input_flag = True
-
-        if (doors == 1 or doors == 2) and wall_direction == 1 and windows == 1 and x_offset > 3:
+        if grounded_floor_or_maybe_not:
+            while input_flag:
+                mc.postToChat("Would you like 0 1 or 2 windows")
+                windows = int(input("Would you like 0, 1, or 2 windows?"))
+                mc.postToChat(windows)
+                if windows == 0 or windows == 2 or windows == 1:
+                    input_flag = False
+                else:
+                    input_flag = True
+        else:
+            windows = random.randint(0, 2)
+        if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 1 and windows == 1 and x_offset > 3:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
-        elif (doors == 1 or doors == 2) and wall_direction == 1 and windows == 2 and x_offset > 4:
+        elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 1 and windows == 2 and x_offset > 4:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
             mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner, 20)
-        if (doors == 1 or doors == 2) and wall_direction == 2 and windows == 1 and x_offset > 3:
+        if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 2 and windows == 1 and x_offset > 3:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + window_location, y_corner + 1, z_corner + z_offset, 20)
-        elif (doors == 1 or doors == 2) and wall_direction == 2 and windows == 2 and x_offset > 4:
+        elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 2 and windows == 2 and x_offset > 4:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + window_location, y_corner + 1, z_corner + z_offset, 20)
             mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner + z_offset, 20)
-        if (doors == 1 or doors == 2) and wall_direction == 3 and windows == 1 and x_offset > 3:
+        if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 3 and windows == 1 and x_offset > 3:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner, y_corner + 1, z_corner + window_location, 20)
-        elif (doors == 1 or doors == 2) and wall_direction == 3 and windows == 2 and x_offset > 4:
+        elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 3 and windows == 2 and x_offset > 4:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner, y_corner + 1, z_corner + window_location, 20)
             mc.setBlock(x_corner, y_corner + 1, z_corner + z_offset - window_location, 20)
-        if (doors == 1 or doors == 2) and wall_direction == 4 and windows == 1 and x_offset > 3:
+        if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 4 and windows == 1 and x_offset > 3:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset + window_location, 20)
-        elif (doors == 1 or doors == 2) and wall_direction == 4 and windows == 2 and x_offset > 4:
+        elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 4 and windows == 2 and x_offset > 4:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + window_location, 20)
             mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset - window_location, 20)
@@ -205,6 +218,9 @@ def build_stairs(block_id3, x, y, z, x_offset, y_offset, z_offset, num_stairs, d
     while steps < num_stairs:
         mc.setBlock(x+steps, y+steps, z, block_id3)
         steps += 1
+    mc.setBlock(x+steps-2, y+steps-1, z, 0)
+    mc.setBlock(x+steps-3, y+steps-1, z, 0)
+    mc.setBlock(x+steps-4, y+steps-1, z, 0)
 
 
 def save_coordinates(x, y, z, description):
@@ -218,7 +234,6 @@ def save_coordinates(x, y, z, description):
         print(' File does not exist ')
 
     # read file to see if description is already in file
-
 
 
 def main():
