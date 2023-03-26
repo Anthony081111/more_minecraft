@@ -16,7 +16,7 @@ x_offset = 20
 y_offset = 150
 z_offset = 20
 if crater_or_possibly_nothing == "y":
-    wfac.clear_area(x, y, z, x_offset, y_offset, z_offset)
+    wfac.clear_area(x - 5, y - 1, z + 5, x_offset - 5, y_offset, z_offset + 5)
 else:
     pass
 

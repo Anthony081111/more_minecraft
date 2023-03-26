@@ -178,6 +178,7 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
                     input_flag = True
         else:
             windows = random.randint(0, 2)
+            print(f"{doors}    {windows}    {wall_direction}")
         if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 1 and windows == 1 and x_offset > 3:
             window_location = roundDown(x_offset / 4)
             mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
@@ -204,13 +205,49 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
             mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset + window_location, 20)
         elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 4 and windows == 2 and x_offset > 4:
             window_location = roundDown(x_offset / 4)
-            mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + window_location, 20)
+            mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset + window_location, 20)
             mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset - window_location, 20)
-        # Determine if more work is to be done on walls
-        mc.postToChat("Do you want to continue building or re-building walls y or n")
-        more_walls = input("do you want to continue building or re-building walls? y or n ---  ")
-        if more_walls != "y":
+
+        if not grounded_floor_or_maybe_not:
+            for wall_direction in range(1, 5):
+                windows = random.randint(0, 2)
+                if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 1 and windows == 1 and x_offset > 3:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
+                elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 1 and windows == 2 and x_offset > 4:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner + window_location, y_corner + 1, z_corner, 20)
+                    mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner, 20)
+                if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 2 and windows == 1 and x_offset > 3:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner + window_location, y_corner + 1, z_corner + z_offset, 20)
+                elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 2 and windows == 2 and x_offset > 4:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner + window_location, y_corner + 1, z_corner + z_offset, 20)
+                    mc.setBlock(x_corner + x_offset - window_location, y_corner + 1, z_corner + z_offset, 20)
+                if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 3 and windows == 1 and x_offset > 3:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner, y_corner + 1, z_corner + window_location, 20)
+                elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 3 and windows == 2 and x_offset > 4:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner, y_corner + 1, z_corner + window_location, 20)
+                    mc.setBlock(x_corner, y_corner + 1, z_corner + z_offset - window_location, 20)
+                if (doors == 1 or doors == 2 or doors == 0) and wall_direction == 4 and windows == 1 and x_offset > 3:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset + window_location, 20)
+                elif (doors == 1 or doors == 2 or doors == 0) and wall_direction == 4 and windows == 2 and x_offset > 4:
+                    window_location = roundDown(x_offset / 4)
+                    mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset + window_location, 20)
+                    mc.setBlock(x_corner + x_offset, y_corner + 1, z_corner + z_offset - window_location, 20)
             wall_flag = False
+
+
+        # Determine if more work is to be done on walls
+        if grounded_floor_or_maybe_not:
+            mc.postToChat("Do you want to continue building or re-building walls y or n")
+            more_walls = input("Do you want to continue building or re-building walls? y or n ---  ")
+            if more_walls != "y":
+                wall_flag = False
 
 
 def build_stairs(block_id3, x, y, z, x_offset, y_offset, z_offset, num_stairs, direction=None):
