@@ -3,7 +3,7 @@ import walls_floors_and_ceilings_that_are_really_floors as wfac
 import minecraft_coordinates as minecoor
 import WHERE_ARE_MY_STUPID_COORDINATES as whereCoord
 mc = Minecraft.create()
-# hi
+
 coordinates = whereCoord.return_coordinates()
 x = coordinates[0]
 y = coordinates[1]
