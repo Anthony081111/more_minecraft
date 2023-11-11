@@ -103,7 +103,7 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         # Get number of doors for this wall
         if grounded_floor_or_maybe_not:
             while input_flag:
-                mc.postToChat("Would you like 0 1 or 2 doors")
+                mc.postToChat("Would you like 0, 1, or 2 doors?")
                 doors = int(input("Would you like 0, 1, or 2 doors?"))
                 mc.postToChat(doors)
                 if doors >= 0 and doors <= 4:
@@ -113,6 +113,9 @@ def build_walls(x_corner, y_corner, z_corner, x_offset, y_offset, z_offset, bloc
         # place doors in wall
         if doors == 1 and wall_direction == 1 and x_offset > 3:
             door_location = roundDown(x_offset / 2)
+            mc.setBlocks(x_corner + door_location, y_corner, z_corner,
+                         x_corner + door_location, y_corner + 1, z_corner,
+                         64, 0)
             mc.setBlocks(x_corner + door_location, y_corner, z_corner,
                          x_corner + door_location, y_corner + 1, z_corner,
                          64, 8)

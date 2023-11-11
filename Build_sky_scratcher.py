@@ -12,9 +12,9 @@ x += 1
 z += 1
 
 crater_or_possibly_nothing = input("Do you want to clear the area?(y/n) ")
-x_offset = 20
-y_offset = 150
-z_offset = 20
+x_offset = 200
+y_offset = 10
+z_offset = 200
 if crater_or_possibly_nothing == "y":
     wfac.clear_area(x - 5, y - 1, z + 5, x_offset - 5, y_offset, z_offset + 5)
 else:
