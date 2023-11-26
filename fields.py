@@ -26,6 +26,24 @@ def plant_flowers(x, y, z, offset_x, offset_z):
                 mc.setBlock(x+i, y, z-j, int(flower_type[0]), int(flower_type[1]))
 
 
+def fence(x, y, z, offset_x, offset_z):
+    # Create a fence around a field
+    # 85 is fence, 107 is fence gate
+    mc.setBlocks(x, y, z, x+offset_x, y, z, 85, 2)
+    mc.setBlocks(x, y, z, x, y, z-offset_z, 85, 2)
+    mc.setBlocks(x+offset_x, y, z, x+offset_x, y, z-offset_z, 85, 2)
+    mc.setBlocks(x, y, z-offset_z, x+offset_x, y, z-offset_z, 85, 2)
+    mc.setBlock(x+offset_x/2, y, z-offset_z, 107)
+    mc.setBlocks(x, y, z-offset_z-1, x+offset_x, y, z-offset_z-1, 42)
+    mc.setBlocks(x, y, z-offset_z-1, x+offset_x, y, z-offset_z-1, 0)
+    mc.setBlock(x+offset_x+1, y, z-offset_z+1, 42)
+    mc.setBlock(x+offset_x+1, y, z-offset_z+1, 0)
+    mc.setBlock(x+1, y, z+1, 42)
+    mc.setBlock(x+1, y, z+1, 0)
+    mc.setBlock(x-1, y, z-offset_z+1, 42)
+    mc.setBlock(x-1, y, z-offset_z+1, 0)
+    mc.setBlock(x+offset_x-1, y, z+1, 42)
+    mc.setBlock(x+offset_x-1, y, z+1, 0)
 if __name__ == "__main__":
     coordinates = whereCoord.return_coordinates()
     x = coordinates[0]
@@ -37,3 +55,4 @@ if __name__ == "__main__":
     # grass is 2
     grass_field(x, y, z, offset_x, offset_z)
     plant_flowers(x, y, z, offset_x, offset_z)
+    fence(x, y, z, offset_x, offset_z)
