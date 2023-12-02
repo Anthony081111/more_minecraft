@@ -7,9 +7,23 @@ mc = Minecraft.create()
 
 
 def grass_field(x, y, z, offset_x, offset_z):
-    # creates a grass field w/ flowers(hopefully)
+    # creates a grass field
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 2)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
+
+
+def farm(x, y, z, offset_x, offset_z):
+    # creates a farm
+    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 60)
+    mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
+
+
+def animals(x, y, z, offset_x, offset_z):
+    # creates a podzol field w/ animals
+    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 3, 2)
+    mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
+    for i in range(1, 6):
+        mc.spawnEntity(x+3, y, z-3, 90)
 
 
 def plant_flowers(x, y, z, offset_x, offset_z):
@@ -44,6 +58,8 @@ def fence(x, y, z, offset_x, offset_z):
     mc.setBlock(x-1, y, z-offset_z+1, 0)
     mc.setBlock(x+offset_x-1, y, z+1, 42)
     mc.setBlock(x+offset_x-1, y, z+1, 0)
+
+
 if __name__ == "__main__":
     coordinates = whereCoord.return_coordinates()
     x = coordinates[0]
@@ -55,4 +71,8 @@ if __name__ == "__main__":
     # grass is 2
     grass_field(x, y, z, offset_x, offset_z)
     plant_flowers(x, y, z, offset_x, offset_z)
+    fence(x, y, z, offset_x, offset_z)
+    x = x + offset_x + 2
+    # animals(x, y, z, offset_x, offset_z)
+
     fence(x, y, z, offset_x, offset_z)
