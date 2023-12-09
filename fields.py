@@ -12,18 +12,30 @@ def grass_field(x, y, z, offset_x, offset_z):
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
 
 
+def fish(x, y, z, offset_x, offset_z):
+    # creates an artificial pond w/ fish
+    mc.setBlocks(x+1, y-1, z-1, x+offset_x-1, y-3, z-offset_z+1, 9)
+    mc.setBlocks(x, y-4, z, x+offset_x, y-4, z-offset_z, 3)
+    mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
+    for i in range(1, 6):
+        mc.spawnEntity(x+3, y, z-3, 94)
+
+
 def farm(x, y, z, offset_x, offset_z):
     # creates a farm
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 60)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
+    mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 59, 7)
 
 
-def animals(x, y, z, offset_x, offset_z):
+def animals(x, y, z, offset_x, offset_z, animal_type):
     # creates a podzol field w/ animals
+    # Pig = 90 Sheep = 91 Cow = 92 chicken = 93
+    animal_dict = {"pig": 90, "sheep": 91, "cow": 92, "chicken": 93, "horse": 100, "donkey": 31, "mule": 32}
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 3, 2)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
     for i in range(1, 6):
-        mc.spawnEntity(x+3, y, z-3, 90)
+        mc.spawnEntity(x+3, y, z-3, animal_dict[animal_type])
 
 
 def plant_flowers(x, y, z, offset_x, offset_z):
@@ -73,6 +85,14 @@ if __name__ == "__main__":
     plant_flowers(x, y, z, offset_x, offset_z)
     fence(x, y, z, offset_x, offset_z)
     x = x + offset_x + 2
-    # animals(x, y, z, offset_x, offset_z)
-
+    grass_field(x, y, z, offset_x, offset_z)
+    animals(x, y, z, offset_x, offset_z, "cow")
+    fence(x, y, z, offset_x, offset_z)
+    z = z - offset_z - 2
+    grass_field(x, y, z, offset_x, offset_z)
+    farm(x, y, z, offset_x, offset_z)
+    fence(x, y, z, offset_x, offset_z)
+    x = x - offset_x - 2
+    grass_field(x, y, z, offset_x, offset_z)
+    fish(x, y, z, offset_x, offset_z)
     fence(x, y, z, offset_x, offset_z)
