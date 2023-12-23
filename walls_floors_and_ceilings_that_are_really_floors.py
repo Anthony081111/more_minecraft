@@ -280,15 +280,15 @@ def main():
     # Find the location of the player
     position = mc.player.getTilePos()
     # Anthony's Dec 3  location
-    position.x = 394
+    """ position.x = 394
     position.y = 1
 
-    position.z = 48
+    position.z = 48"""
 
     # Steve's Dec 17 location of the player
-    """position.x = 269
+    position.x = 269
     position.y = -26
-    position.z = 126"""
+    position.z = 126
 
     mc.player.setTilePos(position.x, position.y, position.z)
 

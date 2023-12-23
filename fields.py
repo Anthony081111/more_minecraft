@@ -21,7 +21,7 @@ def fish(x, y, z, offset_x, offset_z):
         mc.spawnEntity(x+3, y, z-3, 94)
 
 
-def farm(x, y, z, offset_x, offset_z, crop_type):
+def farm(x, y, z, offset_x, offset_z):
     # creates a farm
     crop_dict = {"wheat": 59, "beetroot": 207, "carrot": 141, "potato": 142}
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 60)
@@ -31,6 +31,7 @@ def farm(x, y, z, offset_x, offset_z, crop_type):
 
 def animals(x, y, z, offset_x, offset_z, animal_type):
     # creates a podzol field w/ animals
+    # Pig = 90 Sheep = 91 Cow = 92 chicken = 93
     animal_dict = {"pig": 90, "sheep": 91, "cow": 92, "chicken": 93, "horse": 100, "donkey": 31, "mule": 32}
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 3, 2)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
@@ -81,7 +82,6 @@ if __name__ == "__main__":
     offset_x = 10
     offset_z = 10
     # grass is 2
-
     grass_field(x, y, z, offset_x, offset_z)
     plant_flowers(x, y, z, offset_x, offset_z)
     fence(x, y, z, offset_x, offset_z)

@@ -47,7 +47,7 @@ def save_coordinates(description, x, y, z):
                     df.to_csv(coord_file, index=False)
                     return
         else:
-            df = df.append(df_cur_record)
+            df = df._append(df_cur_record)
             df.to_csv(coord_file, index=False)
             return
 
