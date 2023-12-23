@@ -13,9 +13,11 @@ mc.player.setTilePos(x, y, z)
 keep_going = True
 current_id = int(input("What is your starting id?"))
 while keep_going:
-    x = x+2
-    mc.setBlock(x, y, z, current_id)
-    current_id += 1
-    stop = input("Keep going?(n to stop)")
+    for i in range(0, 10):
+        x = x+2
+        mc.setBlock(x, y, z, 0)
+        mc.setBlock(x, y, z, current_id)
+        current_id += 1
+    stop = input("Do you want to keep going?")
     if stop == "n":
         keep_going = False
