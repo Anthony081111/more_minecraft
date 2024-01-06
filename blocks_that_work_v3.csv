@@ -1,0 +1,445 @@
+ block_number , Meta Data ,block_description,Meta Data Description,Original Text,status
+ -   ,,Air,(minecraft:air),0,valid description
+ 1 ,,Stone,(minecraft:stone),1,needs research
+ 1 , 1 ,Granite,(minecraft:stone),1:01,needs research
+ 1 , 2 ,Polished Granite,(minecraft:stone),1:02,needs research
+ 1 , 3 ,Diorite,(minecraft:stone),1:03,needs research
+ 1 , 4 ,Polished Diorite,(minecraft:stone),1:04,needs research
+ 1 , 5 ,Andesite,(minecraft:stone),1:05,needs research
+ 1 ,,Polished Andesite,(minecraft:stone),1:06,needs research
+ 2 ,,Grass,(minecraft:grass),2,needs research
+ 3 ,,Dirt,(minecraft:dirt),3,needs research
+ 3 , 2 ,Coarse Dirt,(minecraft:dirt),3:01,needs research
+ 3 , 3 ,Podzol,(minecraft:dirt),3:02,needs research
+ 4 ,,Cobblestone,(minecraft:cobblestone),4,needs research
+ 5 ,,Oak Wood Plank,(minecraft:planks),5,needs research
+ 5 , 1 ,Spruce Wood Plank,(minecraft:planks),5:01,needs research
+ 5 , 2 ,Birch Wood Plank,(minecraft:planks),5:02,needs research
+ 5 , 3 ,Jungle Wood Plank,(minecraft:planks),5:03,needs research
+ 5 , 4 ,Acacia Wood Plank,(minecraft:planks),5:04,needs research
+ 5 , 5 ,Dark Oak Wood Plank,(minecraft:planks),5:05,needs research
+ 6 ,,Oak Sapling,(minecraft:sapling),6,needs research
+ 6 , 1 ,Spruce Sapling,(minecraft:sapling),6:01,needs research
+ 6 , 2 ,Birch Sapling,(minecraft:sapling),6:02,needs research
+ 6 , 3 ,Jungle Sapling,(minecraft:sapling),6:03,needs research
+ 6 , 4 ,Acacia Sapling,(minecraft:sapling),6:04,needs research
+ 6 , 5 ,Dark Oak Sapling,(minecraft:sapling),6:05,needs research
+ 7 ,,Bedrock,(minecraft:bedrock),7,needs research
+ 8 ,,Flowing Water,(minecraft:flowing_water),8,needs research
+ 9 ,,Still Water,(minecraft:water),9,needs research
+ 10 ,,Flowing Lava,(minecraft:flowing_lava),10,needs research
+ 11 ,,Still Lava,(minecraft:lava),11,needs research
+ 12 ,,Sand,(minecraft:sand),12,needs research
+ 12 , 1 ,Red Sand,(minecraft:sand),12:01,needs research
+ 13 ,,Gravel,(minecraft:gravel),13,needs research
+ 14 ,,Gold Ore,(minecraft:gold_ore),14,needs research
+ 15 ,,Iron Ore,(minecraft:iron_ore),15,needs research
+ 16 ,,Coal Ore,(minecraft:coal_ore),16,needs research
+ 17 ,,Oak Wood,(minecraft:log),17,needs research
+ 17 , 1 ,Spruce Wood,(minecraft:log),17:01,needs research
+ 17 , 2 ,Birch Wood,(minecraft:log),17:02,needs research
+ 17 , 3 ,Jungle Wood,(minecraft:log),17:03,needs research
+ 18 ,,Oak Leaves,(minecraft:leaves),18,needs research
+ 18 , 1 ,Spruce Leaves,(minecraft:leaves),18:01,needs research
+ 18 , 2 ,Birch Leaves,(minecraft:leaves),18:02,needs research
+ 18 , 3 ,Jungle Leaves,(minecraft:leaves),18:03,needs research
+ 19 ,,Sponge,(minecraft:sponge),19,needs research
+ 19 , 1 ,Wet Sponge,(minecraft:sponge),19:01,needs research
+ 20 ,,Glass,(minecraft:glass),20,needs research
+ 21 ,,Lapis Lazuli Ore,(minecraft:lapis_ore),21,needs research
+ 22 ,,Lapis Lazuli Block,(minecraft:lapis_block),22,needs research
+ 23 ,,Dispenser,(minecraft:dispenser),23,needs research
+ 24 ,,Sandstone,(minecraft:sandstone),24,needs research
+ 24 , 1 ,Chiseled Sandstone,(minecraft:sandstone),24:01:00,needs research
+ 24 , 2 ,Smooth Sandstone,(minecraft:sandstone),24:02:00,needs research
+ 25 ,,Note Block,(minecraft:noteblock),25,needs research
+ 26 ,,Bed,(minecraft:bed),26,needs research
+ 27 ,,Powered Rail,(minecraft:golden_rail),27,needs research
+ 28 ,,Detector Rail,(minecraft:detector_rail),28,needs research
+ 29 ,,Sticky Piston,(minecraft:sticky_piston),29,needs research
+ 30 ,,Cobweb,(minecraft:web),30,needs research
+ 31 ,,Dead Shrub,(minecraft:tallgrass),31,needs research
+ 31 , 1 ,Grass,(minecraft:tallgrass),31:01:00,needs research
+ 31 , 2 ,Fern,(minecraft:tallgrass),31:02:00,needs research
+ 32 ,,Dead Bush,(minecraft:deadbush),32,needs research
+ 33 ,,Piston,(minecraft:piston),33,needs research
+ 34 ,,Piston Head,(minecraft:piston_head),34,needs research
+ 35 ,,White Wool,(minecraft:wool),35,needs research
+ 35 , 1 ,Orange Wool,(minecraft:wool),35:01:00,needs research
+ 35 , 2 ,Magenta Wool,(minecraft:wool),35:02:00,needs research
+ 35 , 3 ,Light Blue Wool,(minecraft:wool),35:03:00,needs research
+ 35 , 4 ,Yellow Wool,(minecraft:wool),35:04:00,needs research
+ 35 , 5 ,Lime Wool,(minecraft:wool),35:05:00,needs research
+ 35 , 6 ,Pink Wool,(minecraft:wool),35:06:00,needs research
+ 35 , 7 ,Gray Wool,(minecraft:wool),35:07:00,needs research
+ 35 , 8 ,Light Gray Wool,(minecraft:wool),35:08:00,needs research
+ 35 , 9 ,Cyan Wool,(minecraft:wool),35:09:00,needs research
+ 35 , 10 ,Purple Wool,(minecraft:wool),35:10:00,needs research
+ 35 , 11 ,Blue Wool,(minecraft:wool),35:11:00,needs research
+ 35 , 12 ,Brown Wool,(minecraft:wool),35:12:00,needs research
+ 35 , 13 ,Green Wool,(minecraft:wool),35:13:00,needs research
+ 35 , 14 ,Red Wool,(minecraft:wool),35:14:00,needs research
+ 35 , 15 ,Black Wool,(minecraft:wool),35:15:00,needs research
+ 37 ,,Dandelion,(minecraft:yellow_flower),37,needs research
+ 38 ,,Poppy,(minecraft:red_flower),38,needs research
+ 38 , 1 ,Blue Orchid,(minecraft:red_flower),38:01:00,needs research
+ 38 , 2 ,Allium,(minecraft:red_flower),38:02:00,needs research
+ 38 , 3 ,Azure Bluet,(minecraft:red_flower),38:03:00,needs research
+ 38 , 4 ,Red Tulip,(minecraft:red_flower),38:04:00,needs research
+ 38 , 5 ,Orange Tulip,(minecraft:red_flower),38:05:00,needs research
+ 38 , 6 ,White Tulip,(minecraft:red_flower),38:06:00,needs research
+ 38 , 7 ,Pink Tulip,(minecraft:red_flower),38:07:00,needs research
+ 38 , 8 ,Oxeye Daisy,(minecraft:red_flower),38:08:00,needs research
+ 39 ,,Brown Mushroom,(minecraft:brown_mushroom),39,needs research
+ 40 ,,Red Mushroom,(minecraft:red_mushroom),40,needs research
+ 41 ,,Gold Block,(minecraft:gold_block),41,needs research
+ 42 ,,Iron Block,(minecraft:iron_block),42,needs research
+ 43 ,,Double Stone Slab,(minecraft:double_stone_slab),43,needs research
+ 43 , 1 ,Double Sandstone Slab,(minecraft:double_stone_slab),43:01:00,needs research
+ 43 , 2 ,Double Wooden Slab,(minecraft:double_stone_slab),43:02:00,needs research
+ 43 , 3 ,Double Cobblestone Slab,(minecraft:double_stone_slab),43:03:00,needs research
+ 43 , 4 ,Double Brick Slab,(minecraft:double_stone_slab),43:04:00,needs research
+ 43 , 5 ,Double Stone Brick Slab,(minecraft:double_stone_slab),43:05:00,needs research
+ 43 , 6 ,Double Nether Brick Slab,(minecraft:double_stone_slab),43:06:00,needs research
+ 43 , 7 ,Double Quartz Slab,(minecraft:double_stone_slab),43:07:00,needs research
+ 44 ,,Stone Slab,(minecraft:stone_slab),44,needs research
+ 44 , 1 ,Sandstone Slab,(minecraft:stone_slab),44:01:00,needs research
+ 44 , 2 ,Wooden Slab,(minecraft:stone_slab),44:02:00,needs research
+ 44 , 3 ,Cobblestone Slab,(minecraft:stone_slab),44:03:00,needs research
+ 44 , 4 ,Brick Slab,(minecraft:stone_slab),44:04:00,needs research
+ 44 , 5 ,Stone Brick Slab,(minecraft:stone_slab),44:05:00,needs research
+ 44 , 6 ,Nether Brick Slab,(minecraft:stone_slab),44:06:00,needs research
+ 44 , 7 ,Quartz Slab,(minecraft:stone_slab),44:07:00,needs research
+ 45 ,,Bricks,(minecraft:brick_block),45,needs research
+ 46 ,,TNT,(minecraft:tnt),46,needs research
+ 47 ,,Bookshelf,(minecraft:bookshelf),47,needs research
+ 48 ,,Moss Stone,(minecraft:mossy_cobblestone),48,needs research
+ 49 ,,Obsidian,(minecraft:obsidian),49,needs research
+ 50 ,,Torch,(minecraft:torch),50,needs research
+ 51 ,,Fire,(minecraft:fire),51,needs research
+ 52 ,,Monster Spawner,(minecraft:mob_spawner),52,needs research
+ 53 ,,Oak Wood Stairs,(minecraft:oak_stairs),53,needs research
+ 54 ,,Chest,(minecraft:chest),54,needs research
+ 55 ,,Redstone Wire,(minecraft:redstone_wire),55,needs research
+ 56 ,,Diamond Ore,(minecraft:diamond_ore),56,needs research
+ 57 ,,Diamond Block,(minecraft:diamond_block),57,needs research
+ 58 ,,Crafting Table,(minecraft:crafting_table),58,needs research
+ 59 ,,Wheat Crops,(minecraft:wheat),59,needs research
+ 60 ,,Farmland,(minecraft:farmland),60,needs research
+ 61 ,,Furnace,(minecraft:furnace),61,needs research
+ 62 ,,Burning Furnace,(minecraft:lit_furnace),62,needs research
+ 63 ,,Standing Sign Block,(minecraft:standing_sign),63,needs research
+ 64 ,,Oak Door Block,(minecraft:wooden_door),64,needs research
+ 65 ,,Ladder,(minecraft:ladder),65,needs research
+ 66 ,,Rail,(minecraft:rail),66,needs research
+ 67 ,,Cobblestone Stairs,(minecraft:stone_stairs),67,needs research
+ 68 ,,Wall-mounted Sign Block,(minecraft:wall_sign),68,needs research
+ 69 ,,Lever,(minecraft:lever),69,needs research
+ 70 ,,Stone Pressure Plate,(minecraft:stone_pressure_plate),70,needs research
+ 71 ,,Iron Door Block,(minecraft:iron_door),71,needs research
+ 72 ,,Wooden Pressure Plate,(minecraft:wooden_pressure_plate),72,needs research
+ 73 ,,Redstone Ore,(minecraft:redstone_ore),73,needs research
+ 74 ,,Glowing Redstone Ore,(minecraft:lit_redstone_ore),74,needs research
+ 75 ,,Redstone Torch (off),(minecraft:unlit_redstone_torch),75,needs research
+ 76 ,,Redstone Torch (on),(minecraft:redstone_torch),76,needs research
+ 77 ,,Stone Button,(minecraft:stone_button),77,needs research
+ 78 ,,Snow,(minecraft:snow_layer),78,needs research
+ 79 ,,Ice,(minecraft:ice),79,needs research
+ 80 ,,Snow Block,(minecraft:snow),80,needs research
+ 81 ,,Cactus,(minecraft:cactus),81,needs research
+ 82 ,,Clay,(minecraft:clay),82,needs research
+ 83 ,,Sugar Canes,(minecraft:reeds),83,needs research
+ 84 ,,Jukebox,(minecraft:jukebox),84,needs research
+ 85 ,,Oak Fence,(minecraft:fence),85,needs research
+ 86 ,,Pumpkin,(minecraft:pumpkin),86,needs research
+ 87 ,,Netherrack,(minecraft:netherrack),87,needs research
+ 88 ,,Soul Sand,(minecraft:soul_sand),88,needs research
+ 89 ,,Glowstone,(minecraft:glowstone),89,needs research
+ 90 ,,Nether Portal,(minecraft:portal),90,needs research
+ 91 ,,Jack o'Lantern,(minecraft:lit_pumpkin),91,needs research
+ 92 ,,Cake Block,(minecraft:cake),92,needs research
+ 93 ,,Redstone Repeater Block (off),(minecraft:unpowered_repeater),93,needs research
+ 94 ,,Redstone Repeater Block (on),(minecraft:powered_repeater),94,needs research
+ 95 ,,White Stained Glass,(minecraft:stained_glass),95,needs research
+ 95 , 1 ,Orange Stained Glass,(minecraft:stained_glass),95:01:00,needs research
+ 95 , 2 ,Magenta Stained Glass,(minecraft:stained_glass),95:02:00,needs research
+ 95 , 3 ,Light Blue Stained Glass,(minecraft:stained_glass),95:03:00,needs research
+ 95 , 4 ,Yellow Stained Glass,(minecraft:stained_glass),95:04:00,needs research
+ 95 , 5 ,Lime Stained Glass,(minecraft:stained_glass),95:05:00,needs research
+ 95 , 6 ,Pink Stained Glass,(minecraft:stained_glass),95:06:00,needs research
+ 95 , 7 ,Gray Stained Glass,(minecraft:stained_glass),95:07:00,needs research
+ 95 , 8 ,Light Gray Stained Glass,(minecraft:stained_glass),95:08:00,needs research
+ 95 , 9 ,Cyan Stained Glass,(minecraft:stained_glass),95:09:00,needs research
+ 95 , 10 ,Purple Stained Glass,(minecraft:stained_glass),95:10:00,needs research
+ 95 , 11 ,Blue Stained Glass,(minecraft:stained_glass),95:11:00,needs research
+ 95 , 12 ,Brown Stained Glass,(minecraft:stained_glass),95:12:00,needs research
+ 95 , 13 ,Green Stained Glass,(minecraft:stained_glass),95:13:00,needs research
+ 95 , 14 ,Red Stained Glass,(minecraft:stained_glass),95:14:00,needs research
+ 95 , 15 ,Black Stained Glass,(minecraft:stained_glass),95:15:00,needs research
+ 96 ,,Wooden Trapdoor,(minecraft:trapdoor),96,needs research
+ 97 ,,Stone Monster Egg,(minecraft:monster_egg),97,needs research
+ 97 , 1 ,Cobblestone Monster Egg,(minecraft:monster_egg),97:01:00,needs research
+ 97 , 2 ,Stone Brick Monster Egg,(minecraft:monster_egg),97:02:00,needs research
+ 97 , 3 ,Mossy Stone Brick Monster Egg,(minecraft:monster_egg),97:03:00,needs research
+ 97 , 4 ,Cracked Stone Brick Monster Egg,(minecraft:monster_egg),97:04:00,needs research
+ 97 , 5 ,Chiseled Stone Brick Monster Egg,(minecraft:monster_egg),97:05:00,needs research
+ 98 ,,Stone Bricks,(minecraft:stonebrick),98,needs research
+ 98 , 1 ,Mossy Stone Bricks,(minecraft:stonebrick),98:01:00,needs research
+ 98 , 2 ,Cracked Stone Bricks,(minecraft:stonebrick),98:02:00,needs research
+ 98 , 3 ,Chiseled Stone Bricks,(minecraft:stonebrick),98:03:00,needs research
+ 99 ,,Brown Mushroom Block,(minecraft:brown_mushroom_block),99,needs research
+ 100 ,,Red Mushroom Block,(minecraft:red_mushroom_block),100,needs research
+ 101 ,,Iron Bars,(minecraft:iron_bars),101,needs research
+ 102 ,,Glass Pane,(minecraft:glass_pane),102,needs research
+ 103 ,,Melon Block,(minecraft:melon_block),103,needs research
+ 104 ,,Pumpkin Stem,(minecraft:pumpkin_stem),104,needs research
+ 105 ,,Melon Stem,(minecraft:melon_stem),105,needs research
+ 106 ,,Vines,(minecraft:vine),106,needs research
+ 107 ,,Oak Fence Gate,(minecraft:fence_gate),107,needs research
+ 108 ,,Brick Stairs,(minecraft:brick_stairs),108,needs research
+ 109 ,,Stone Brick Stairs,(minecraft:stone_brick_stairs),109,needs research
+ 110 ,,Mycelium,(minecraft:mycelium),110,needs research
+ 111 ,,Lily Pad,(minecraft:waterlily),111,needs research
+ 112 ,,Nether Brick,(minecraft:nether_brick),112,needs research
+ 113 ,,Nether Brick Fence,(minecraft:nether_brick_fence),113,needs research
+ 114 ,,Nether Brick Stairs,(minecraft:nether_brick_stairs),114,needs research
+ 115 ,,Nether Wart,(minecraft:nether_wart),115,needs research
+ 116 ,,Enchantment Table,(minecraft:enchanting_table),116,needs research
+ 117 ,,Brewing Stand,(minecraft:brewing_stand),117,needs research
+ 118 ,,Cauldron,(minecraft:cauldron),118,needs research
+ 119 ,,End Portal,(minecraft:end_portal),119,needs research
+ 120 ,,End Portal Frame,(minecraft:end_portal_frame),120,needs research
+ 121 ,,End Stone,(minecraft:end_stone),121,needs research
+ 122 ,,Dragon Egg,(minecraft:dragon_egg),122,needs research
+ 123 ,,Redstone Lamp (inactive),(minecraft:redstone_lamp),123,needs research
+ 124 ,,Redstone Lamp (active),(minecraft:lit_redstone_lamp),124,needs research
+ 125 ,,Double Oak Wood Slab,(minecraft:double_wooden_slab),125,needs research
+ 125 , 1 ,Double Spruce Wood Slab,(minecraft:double_wooden_slab),125:01:00,needs research
+ 125 , 2 ,Double Birch Wood Slab,(minecraft:double_wooden_slab),125:02:00,needs research
+ 125 , 3 ,Double Jungle Wood Slab,(minecraft:double_wooden_slab),125:03:00,needs research
+ 125 , 4 ,Double Acacia Wood Slab,(minecraft:double_wooden_slab),125:04:00,needs research
+ 125 , 5 ,Double Dark Oak Wood Slab,(minecraft:double_wooden_slab),125:05:00,needs research
+ 126 ,,Oak Wood Slab,(minecraft:wooden_slab),126,needs research
+ 126 , 1 ,Spruce Wood Slab,(minecraft:wooden_slab),126:01:00,needs research
+ 126 , 2 ,Birch Wood Slab,(minecraft:wooden_slab),126:02:00,needs research
+ 126 , 3 ,Jungle Wood Slab,(minecraft:wooden_slab),126:03:00,needs research
+ 126 , 4 ,Acacia Wood Slab,(minecraft:wooden_slab),126:04:00,needs research
+ 126 , 5 ,Dark Oak Wood Slab,(minecraft:wooden_slab),126:05:00,needs research
+ 127 ,,Cocoa,(minecraft:cocoa),127,needs research
+ 128 ,,Sandstone Stairs,(minecraft:sandstone_stairs),128,needs research
+ 129 ,,Emerald Ore,(minecraft:emerald_ore),129,needs research
+ 130 ,,Ender Chest,(minecraft:ender_chest),130,needs research
+ 131 ,,Tripwire Hook,(minecraft:tripwire_hook),131,needs research
+ 132 ,,Tripwire,(minecraft:tripwire_hook),132,needs research
+ 133 ,,Emerald Block,(minecraft:emerald_block),133,needs research
+ 134 ,,Spruce Wood Stairs,(minecraft:spruce_stairs),134,needs research
+ 135 ,,Birch Wood Stairs,(minecraft:birch_stairs),135,needs research
+ 136 ,,Jungle Wood Stairs,(minecraft:jungle_stairs),136,needs research
+ 137 ,,Command Block,(minecraft:command_block),137,needs research
+ 138 ,,Beacon,(minecraft:beacon),138,needs research
+ 139 ,,Cobblestone Wall,(minecraft:cobblestone_wall),139,needs research
+ 139 , 1 ,Mossy Cobblestone Wall,(minecraft:cobblestone_wall),139:01:00,needs research
+ 140 ,,Flower Pot,(minecraft:flower_pot),140,needs research
+ 141 ,,Carrots,(minecraft:carrots),141,needs research
+ 142 ,,Potatoes,(minecraft:potatoes),142,needs research
+ 143 ,,Wooden Button,(minecraft:wooden_button),143,needs research
+ 144 ,,Mob Head,(minecraft:skull),144,needs research
+ 145 ,,Anvil,(minecraft:anvil),145,needs research
+ 146 ,,Trapped Chest,(minecraft:trapped_chest),146,needs research
+ 147 ,,Weighted Pressure Plate (light),(minecraft:light_weighted_pressure_plate),147,needs research
+ 148 ,,Weighted Pressure Plate (heavy),(minecraft:heavy_weighted_pressure_plate),148,needs research
+ 149 ,,Redstone Comparator (inactive),(minecraft:unpowered_comparator),149,needs research
+ 150 ,,Redstone Comparator (active),(minecraft:powered_comparator),150,needs research
+ 151 ,,Daylight Sensor,(minecraft:daylight_detector),151,needs research
+ 152 ,,Redstone Block,(minecraft:redstone_block),152,needs research
+ 153 ,,Nether Quartz Ore,(minecraft:quartz_ore),153,needs research
+ 154 ,,Hopper,(minecraft:hopper),154,needs research
+ 155 ,,Quartz Block,(minecraft:quartz_block),155,needs research
+ 155 , 1 ,Chiseled Quartz Block,(minecraft:quartz_block),155:01:00,needs research
+ 155 , 2 ,Pillar Quartz Block,(minecraft:quartz_block),155:02:00,needs research
+ 156 ,,Quartz Stairs,(minecraft:quartz_stairs),156,needs research
+ 157 ,,Activator Rail,(minecraft:activator_rail),157,needs research
+ 158 ,,Dropper,(minecraft:dropper),158,needs research
+ 159 ,,White Hardened Clay,(minecraft:stained_hardened_clay),159,needs research
+ 159 , 1 ,Orange Hardened Clay,(minecraft:stained_hardened_clay),159:01:00,needs research
+ 159 , 2 ,Magenta Hardened Clay,(minecraft:stained_hardened_clay),159:02:00,needs research
+ 159 , 3 ,Light Blue Hardened Clay,(minecraft:stained_hardened_clay),159:03:00,needs research
+ 159 , 4 ,Yellow Hardened Clay,(minecraft:stained_hardened_clay),159:04:00,needs research
+ 159 , 5 ,Lime Hardened Clay,(minecraft:stained_hardened_clay),159:05:00,needs research
+ 159 , 6 ,Pink Hardened Clay,(minecraft:stained_hardened_clay),159:06:00,needs research
+ 159 , 7 ,Gray Hardened Clay,(minecraft:stained_hardened_clay),159:07:00,needs research
+ 159 , 8 ,Light Gray Hardened Clay,(minecraft:stained_hardened_clay),159:08:00,needs research
+ 159 , 9 ,Cyan Hardened Clay,(minecraft:stained_hardened_clay),159:09:00,needs research
+ 159 , 10 ,Purple Hardened Clay,(minecraft:stained_hardened_clay),159:10:00,needs research
+ 159 , 11 ,Blue Hardened Clay,(minecraft:stained_hardened_clay),159:11:00,needs research
+ 159 , 12 ,Brown Hardened Clay,(minecraft:stained_hardened_clay),159:12:00,needs research
+ 159 , 13 ,Green Hardened Clay,(minecraft:stained_hardened_clay),159:13:00,needs research
+ 159 , 14 ,Red Hardened Clay,(minecraft:stained_hardened_clay),159:14:00,needs research
+ 159 , 15 ,Black Hardened Clay,(minecraft:stained_hardened_clay),159:15:00,needs research
+ 160 ,,White Stained Glass Pane,(minecraft:stained_glass_pane),160,needs research
+ 160 , 1 ,Orange Stained Glass Pane,(minecraft:stained_glass_pane),160:01:00,needs research
+ 160 , 2 ,Magenta Stained Glass Pane,(minecraft:stained_glass_pane),160:02:00,needs research
+ 160 , 3 ,Light Blue Stained Glass Pane,(minecraft:stained_glass_pane),160:03:00,needs research
+ 160 , 4 ,Yellow Stained Glass Pane,(minecraft:stained_glass_pane),160:04:00,needs research
+ 160 , 5 ,Lime Stained Glass Pane,(minecraft:stained_glass_pane),160:05:00,needs research
+ 160 , 6 ,Pink Stained Glass Pane,(minecraft:stained_glass_pane),160:06:00,needs research
+ 160 , 7 ,Gray Stained Glass Pane,(minecraft:stained_glass_pane),160:07:00,needs research
+ 160 , 8 ,Light Gray Stained Glass Pane,(minecraft:stained_glass_pane),160:08:00,needs research
+ 160 , 9 ,Cyan Stained Glass Pane,(minecraft:stained_glass_pane),160:09:00,needs research
+ 160 , 10 ,Purple Stained Glass Pane,(minecraft:stained_glass_pane),160:10:00,needs research
+ 160 , 11 ,Blue Stained Glass Pane,(minecraft:stained_glass_pane),160:11:00,needs research
+ 160 , 12 ,Brown Stained Glass Pane,(minecraft:stained_glass_pane),160:12:00,needs research
+ 160 , 13 ,Green Stained Glass Pane,(minecraft:stained_glass_pane),160:13:00,needs research
+ 160 , 14 ,Red Stained Glass Pane,(minecraft:stained_glass_pane),160:14:00,needs research
+ 160 , 15 ,Black Stained Glass Pane,(minecraft:stained_glass_pane),160:15:00,needs research
+ 161 ,,Acacia Leaves,(minecraft:leaves2),161,needs research
+ 161 , 1 ,Dark Oak Leaves,(minecraft:leaves2),161:01:00,needs research
+ 162 ,,Acacia Wood,(minecraft:log2),162,needs research
+ 162 , 1 ,Dark Oak Wood,(minecraft:log2),162:01:00,needs research
+ 163 ,,Acacia Wood Stairs,(minecraft:acacia_stairs),163,needs research
+ 164 ,,Dark Oak Wood Stairs,(minecraft:dark_oak_stairs),164,needs research
+ 165 ,,Slime Block,(minecraft:slime),165,needs research
+ 166 ,,Barrier,(minecraft:barrier),166,needs research
+ 167 ,,Iron Trapdoor,(minecraft:iron_trapdoor),167,needs research
+ 168 ,,Prismarine,(minecraft:prismarine),168,needs research
+ 168 , 1 ,Prismarine Bricks,(minecraft:prismarine),168:01:00,needs research
+ 168 , 2 ,Dark Prismarine,(minecraft:prismarine),168:02:00,needs research
+ 169 ,,Sea Lantern,(minecraft:sea_lantern),169,needs research
+ 170 ,,Hay Bale,(minecraft:hay_block),170,needs research
+ 171 ,,White Carpet,(minecraft:carpet),171,needs research
+ 171 , 1 ,Orange Carpet,(minecraft:carpet),171:01:00,needs research
+ 171 , 2 ,Magenta Carpet,(minecraft:carpet),171:02:00,needs research
+ 171 , 3 ,Light Blue Carpet,(minecraft:carpet),171:03:00,needs research
+ 171 , 4 ,Yellow Carpet,(minecraft:carpet),171:04:00,needs research
+ 171 , 5 ,Lime Carpet,(minecraft:carpet),171:05:00,needs research
+ 171 , 6 ,Pink Carpet,(minecraft:carpet),171:06:00,needs research
+ 171 , 7 ,Gray Carpet,(minecraft:carpet),171:07:00,needs research
+ 171 , 8 ,Light Gray Carpet,(minecraft:carpet),171:08:00,needs research
+ 171 , 9 ,Cyan Carpet,(minecraft:carpet),171:09:00,needs research
+ 171 , 10 ,Purple Carpet,(minecraft:carpet),171:10:00,needs research
+ 171 , 11 ,Blue Carpet,(minecraft:carpet),171:11:00,needs research
+ 171 , 12 ,Brown Carpet,(minecraft:carpet),171:12:00,needs research
+ 171 , 13 ,Green Carpet,(minecraft:carpet),171:13:00,needs research
+ 171 , 14 ,Red Carpet,(minecraft:carpet),171:14:00,needs research
+ 171 , 15 ,Black Carpet,(minecraft:carpet),171:15:00,needs research
+ 172 ,,Hardened Clay,(minecraft:hardened_clay),172,needs research
+ 173 ,,Block of Coal,(minecraft:coal_block),173,needs research
+ 174 ,,Packed Ice,(minecraft:packed_ice),174,needs research
+ 175 ,,Sunflower,(minecraft:double_plant),175,needs research
+ 175 , 1 ,Lilac,(minecraft:double_plant),175:01:00,needs research
+ 175 , 2 ,Double Tallgrass,(minecraft:double_plant),175:02:00,needs research
+ 175 , 3 ,Large Fern,(minecraft:double_plant),175:03:00,needs research
+ 175 , 4 ,Rose Bush,(minecraft:double_plant),175:04:00,needs research
+ 175 , 5 ,Peony,(minecraft:double_plant),175:05:00,needs research
+ 176 ,,Free-standing Banner,(minecraft:standing_banner),176,needs research
+ 177 ,,Wall-mounted Banner,(minecraft:wall_banner),177,needs research
+ 178 ,,Inverted Daylight Sensor,(minecraft:daylight_detector_inverted),178,needs research
+ 179 ,,Red Sandstone,(minecraft:red_sandstone),179,needs research
+ 179 , 1 ,Chiseled Red Sandstone,(minecraft:red_sandstone),179:01:00,needs research
+ 179 , 2 ,Smooth Red Sandstone,(minecraft:red_sandstone),179:02:00,needs research
+ 180 ,,Red Sandstone Stairs,(minecraft:red_sandstone_stairs),180,needs research
+ 181 ,,Double Red Sandstone Slab,(minecraft:double_stone_slab2),181,needs research
+ 182 ,,Red Sandstone Slab,(minecraft:stone_slab2),182,needs research
+ 183 ,,Spruce Fence Gate,(minecraft:spruce_fence_gate),183,needs research
+ 184 ,,Birch Fence Gate,(minecraft:birch_fence_gate),184,needs research
+ 185 ,,Jungle Fence Gate,(minecraft:jungle_fence_gate),185,needs research
+ 186 ,,Dark Oak Fence Gate,(minecraft:dark_oak_fence_gate),186,needs research
+ 187 ,,Acacia Fence Gate,(minecraft:acacia_fence_gate),187,needs research
+ 188 ,,Spruce Fence,(minecraft:spruce_fence),188,needs research
+ 189 ,,Birch Fence,(minecraft:birch_fence),189,needs research
+ 190 ,,Jungle Fence,(minecraft:jungle_fence),190,needs research
+ 191 ,,Dark Oak Fence,(minecraft:dark_oak_fence),191,needs research
+ 192 ,,Acacia Fence,(minecraft:acacia_fence),192,needs research
+ 193 ,,Spruce Door Block,(minecraft:spruce_door),193,needs research
+ 194 ,,Birch Door Block,(minecraft:birch_door),194,needs research
+ 195 ,,Jungle Door Block,(minecraft:jungle_door),195,needs research
+ 196 ,,Acacia Door Block,(minecraft:acacia_door),196,needs research
+ 197 ,,Dark Oak Door Block,(minecraft:dark_oak_door),197,needs research
+ 198 ,,End Rod,(minecraft:end_rod),198,needs research
+ 199 ,,Chorus Plant,(minecraft:chorus_plant),199,needs research
+ 200 ,,Chorus Flower,(minecraft:chorus_flower),200,needs research
+ 201 ,,Purpur Block,(minecraft:purpur_block),201,needs research
+ 202 ,,Purpur Pillar,(minecraft:purpur_pillar),202,needs research
+ 203 ,,Purpur Stairs,(minecraft:purpur_stairs),203,needs research
+ 204 ,,Purpur Double Slab,(minecraft:purpur_double_slab),204,needs research
+ 205 ,,Purpur Slab,(minecraft:purpur_slab),205,needs research
+ 206 ,,End Stone Bricks,(minecraft:end_bricks),206,needs research
+ 207 ,,Beetroot Block,(minecraft:beetroots),207,needs research
+ 208 ,,Grass Path,(minecraft:grass_path),208,needs research
+ 209 ,,End Gateway,(minecraft:end_gateway),209,needs research
+ 210 ,,Repeating Command Block,(minecraft:repeating_command_block),210,needs research
+ 211 ,,Chain Command Block,(minecraft:chain_command_block),211,needs research
+ 212 ,,Frosted Ice,(minecraft:frosted_ice),212,needs research
+ 213 ,,Magma Block,(minecraft:magma),213,needs research
+ 214 ,,Nether Wart Block,(minecraft:nether_wart_block),214,needs research
+ 215 ,,Red Nether Brick,(minecraft:red_nether_brick),215,needs research
+ 216 ,,Bone Block,(minecraft:bone_block),216,needs research
+ 217 ,,Structure Void,(minecraft:structure_void),217,needs research
+ 218 ,,Observer,(minecraft:observer),218,needs research
+ 219 ,,White Shulker Box,(minecraft:white_shulker_box),219,needs research
+ 220 ,,Orange Shulker Box,(minecraft:orange_shulker_box),220,needs research
+ 221 ,,Magenta Shulker Box,(minecraft:magenta_shulker_box),221,needs research
+ 222 ,,Light Blue Shulker Box,(minecraft:light_blue_shulker_box),222,needs research
+ 223 ,,Yellow Shulker Box,(minecraft:yellow_shulker_box),223,needs research
+ 224 ,,Lime Shulker Box,(minecraft:lime_shulker_box),224,needs research
+ 225 ,,Pink Shulker Box,(minecraft:pink_shulker_box),225,needs research
+ 226 ,,Gray Shulker Box,(minecraft:gray_shulker_box),226,needs research
+ 227 ,,Light Gray Shulker Box,(minecraft:silver_shulker_box),227,needs research
+ 228 ,,Cyan Shulker Box,(minecraft:cyan_shulker_box),228,needs research
+ 229 ,,Purple Shulker Box,(minecraft:purple_shulker_box),229,needs research
+ 230 ,,Blue Shulker Box,(minecraft:blue_shulker_box),230,needs research
+ 231 ,,Brown Shulker Box,(minecraft:brown_shulker_box),231,needs research
+ 232 ,,Green Shulker Box,(minecraft:green_shulker_box),232,needs research
+ 233 ,,Red Shulker Box,(minecraft:red_shulker_box),233,needs research
+ 234 ,,Black Shulker Box,(minecraft:black_shulker_box),234,needs research
+ 235 ,,White Glazed Terracotta,(minecraft:white_glazed_terracotta),235,needs research
+ 236 ,,Orange Glazed Terracotta,(minecraft:orange_glazed_terracotta),236,needs research
+ 237 ,,Magenta Glazed Terracotta,(minecraft:magenta_glazed_terracotta),237,needs research
+ 238 ,,Light Blue Glazed Terracotta,(minecraft:light_blue_glazed_terracotta),238,needs research
+ 239 ,,Yellow Glazed Terracotta,(minecraft:yellow_glazed_terracotta),239,needs research
+ 240 ,,Lime Glazed Terracotta,(minecraft:lime_glazed_terracotta),240,needs research
+ 241 ,,Pink Glazed Terracotta,(minecraft:pink_glazed_terracotta),241,needs research
+ 242 ,,Gray Glazed Terracotta,(minecraft:gray_glazed_terracotta),242,needs research
+ 243 ,,Light Gray Glazed Terracotta,(minecraft:light_gray_glazed_terracotta),243,needs research
+ 244 ,,Cyan Glazed Terracotta,(minecraft:cyan_glazed_terracotta),244,needs research
+ 245 ,,Purple Glazed Terracotta,(minecraft:purple_glazed_terracotta),245,needs research
+ 246 ,,Blue Glazed Terracotta,(minecraft:blue_glazed_terracotta),246,needs research
+ 247 ,,Brown Glazed Terracotta,(minecraft:brown_glazed_terracotta),247,needs research
+ 248 ,,Green Glazed Terracotta,(minecraft:green_glazed_terracotta),248,needs research
+ 249 ,,Red Glazed Terracotta,(minecraft:red_glazed_terracotta),249,needs research
+ 250 ,,Black Glazed Terracotta,(minecraft:black_glazed_terracotta),250,needs research
+ 251 ,,White Concrete,(minecraft:concrete),251,needs research
+ 251 , 1 ,Orange Concrete,(minecraft:concrete),251:01:00,needs research
+ 251 , 2 ,Magenta Concrete,(minecraft:concrete),251:02:00,needs research
+ 251 , 3 ,Light Blue Concrete,(minecraft:concrete),251:03:00,needs research
+ 251 , 4 ,Yellow Concrete,(minecraft:concrete),251:04:00,needs research
+ 251 , 5 ,Lime Concrete,(minecraft:concrete),251:05:00,needs research
+ 251 , 6 ,Pink Concrete,(minecraft:concrete),251:06:00,needs research
+ 251 , 7 ,Gray Concrete,(minecraft:concrete),251:07:00,needs research
+ 251 , 8 ,Light Gray Concrete,(minecraft:concrete),251:08:00,needs research
+ 251 , 9 ,Cyan Concrete,(minecraft:concrete),251:09:00,needs research
+ 251 , 10 ,Purple Concrete,(minecraft:concrete),251:10:00,needs research
+ 251 , 11 ,Blue Concrete,(minecraft:concrete),251:11:00,needs research
+ 251 , 12 ,Brown Concrete,(minecraft:concrete),251:12:00,needs research
+ 251 , 13 ,Green Concrete,(minecraft:concrete),251:13:00,needs research
+ 251 , 14 ,Red Concrete,(minecraft:concrete),251:14:00,needs research
+ 251 , 15 ,Black Concrete,(minecraft:concrete),251:15:00,needs research
+ 252 ,,White Concrete Powder,(minecraft:concrete_powder),252,needs research
+ 252 , 1 ,Orange Concrete Powder,(minecraft:concrete_powder),252:01:00,needs research
+ 252 , 2 ,Magenta Concrete Powder,(minecraft:concrete_powder),252:02:00,needs research
+ 252 , 3 ,Light Blue Concrete Powder,(minecraft:concrete_powder),252:03:00,needs research
+ 252 , 4 ,Yellow Concrete Powder,(minecraft:concrete_powder),252:04:00,needs research
+ 252 , 5 ,Lime Concrete Powder,(minecraft:concrete_powder),252:05:00,needs research
+ 252 , 6 ,Pink Concrete Powder,(minecraft:concrete_powder),252:06:00,needs research
+ 252 , 7 ,Gray Concrete Powder,(minecraft:concrete_powder),252:07:00,needs research
+ 252 , 8 ,Light Gray Concrete Powder,(minecraft:concrete_powder),252:08:00,needs research
+ 252 , 9 ,Cyan Concrete Powder,(minecraft:concrete_powder),252:09:00,needs research
+ 252 , 10 ,Purple Concrete Powder,(minecraft:concrete_powder),252:10:00,needs research
+ 252 , 11 ,Blue Concrete Powder,(minecraft:concrete_powder),252:11:00,needs research
+ 252 , 12 ,Brown Concrete Powder,(minecraft:concrete_powder),252:12:00,needs research
+ 252 , 13 ,Green Concrete Powder,(minecraft:concrete_powder),252:13:00,needs research
+ 252 , 14 ,Red Concrete Powder,(minecraft:concrete_powder),252:14:00,needs research
+ 252 , 15 ,Black Concrete Powder,(minecraft:concrete_powder),252:15:00,needs research
+ 253 ,,n/a,,n/a,needs research
+ 254 ,,n/a,,n/a,needs research
+ 255 ,,Structure Block,(minecraft:structure_block),255,needs research
