@@ -1,5 +1,5 @@
- block_number , Meta Data ,block_description,Meta Data Description,Original Text,status
- -   ,,Air,(minecraft:air),0,valid description
+block_number,Meta Data,block_description,Meta Data Description,Original Text,status
+ 0   ,,Air,(minecraft:air),0,valid description
  1 ,,Stone,(minecraft:stone),1,needs research
  1 , 1 ,Granite,(minecraft:stone),1:01,needs research
  1 , 2 ,Polished Granite,(minecraft:stone),1:02,needs research
