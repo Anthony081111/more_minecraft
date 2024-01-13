@@ -31,17 +31,19 @@ while keep_going:
         blocks_that_work.append(current_id)
         current_id += 1
     for item in blocks_that_work:
+        description, status = read_csv_files.get_block_description(current_id)
+        print("Line 34\n", blocks_that_work)
         invalid_answer = True
         while invalid_answer:
             valid = input(f"Was id {item} valid?(y is valid, n needs research, ? does not exist)")
             if valid == "y" or valid == "n" or valid == "?":
                 invalid_answer = False
         if valid == "y":
-            read_csv_files.change_detail(item, "valid description")
+            read_csv_files.change_detail(item, "valid description", description)
         elif valid == "n":
-            read_csv_files.change_detail(item, "needs research")
+            read_csv_files.change_detail(item, "needs research", description)
         elif valid == "?":
-            read_csv_files.change_detail(item, "doesn't exist")
+            read_csv_files.change_detail(item, "doesn't exist", description)
     stop = input("Do you want to keep going?")
     if stop == "n":
         keep_going = False
