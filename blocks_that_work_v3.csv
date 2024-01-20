@@ -7,27 +7,27 @@ block_number,Meta Data,block_description,Meta Data Description,Original Text,sta
 1,4.0,Polished Diorite,(minecraft:stone),1:04,needs research
 1,5.0,Andesite,(minecraft:stone),1:05,needs research
 1,,Polished Andesite,(minecraft:stone),1:06,needs research
-2,,Grass,(minecraft:grass),2,needs research
-3,,Dirt,(minecraft:dirt),3,needs research
+2,,Grass,(minecraft:grass),2,valid description
+3,,Dirt,(minecraft:dirt),3,valid description
 3,2.0,Coarse Dirt,(minecraft:dirt),3:01,needs research
 3,3.0,Podzol,(minecraft:dirt),3:02,needs research
-4,,Cobblestone,(minecraft:cobblestone),4,needs research
-5,,Oak Wood Plank,(minecraft:planks),5,needs research
+4,,Cobblestone,(minecraft:cobblestone),4,valid description
+5,,Oak Wood Plank,(minecraft:planks),5,valid description
 5,1.0,Spruce Wood Plank,(minecraft:planks),5:01,needs research
 5,2.0,Birch Wood Plank,(minecraft:planks),5:02,needs research
 5,3.0,Jungle Wood Plank,(minecraft:planks),5:03,needs research
 5,4.0,Acacia Wood Plank,(minecraft:planks),5:04,needs research
 5,5.0,Dark Oak Wood Plank,(minecraft:planks),5:05,needs research
-6,,Oak Sapling,(minecraft:sapling),6,needs research
+6,,Oak Sapling,(minecraft:sapling),6,valid description
 6,1.0,Spruce Sapling,(minecraft:sapling),6:01,needs research
 6,2.0,Birch Sapling,(minecraft:sapling),6:02,needs research
 6,3.0,Jungle Sapling,(minecraft:sapling),6:03,needs research
 6,4.0,Acacia Sapling,(minecraft:sapling),6:04,needs research
 6,5.0,Dark Oak Sapling,(minecraft:sapling),6:05,needs research
-7,,Bedrock,(minecraft:bedrock),7,needs research
-8,,Flowing Water,(minecraft:flowing_water),8,needs research
-9,,Still Water,(minecraft:water),9,needs research
-10,,Flowing Lava,(minecraft:flowing_lava),10,needs research
+7,,Bedrock,(minecraft:bedrock),7,valid description
+8,,Flowing Water,(minecraft:flowing_water),8,valid description
+9,,Still Water,(minecraft:water),9,valid description
+10,,Flowing Lava,(minecraft:flowing_lava),10,valid description
 11,,Still Lava,(minecraft:lava),11,needs research
 12,,Sand,(minecraft:sand),12,needs research
 12,1.0,Red Sand,(minecraft:sand),12:01,needs research
@@ -443,4 +443,6 @@ block_number,Meta Data,block_description,Meta Data Description,Original Text,sta
 253,,,,,needs research
 254,,,,,needs research
 255,,Structure Block,(minecraft:structure_block),255,needs research
-404,,test block,(fakeBlock:testingPurpose),404,my favorite color is seven
+404,,Go do something productive,(fakeBlock:testingPurpose),404,needs research
+405,,Go do something productive,(fakeBlock:testingPurpose),405,doesn't exist
+409,,test block 3,(fakeBlock:testingPurpose),409,my favorite color is twenty-seven
