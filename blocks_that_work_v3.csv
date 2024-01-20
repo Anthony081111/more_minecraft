@@ -28,7 +28,7 @@ block_number,Meta Data,block_description,Meta Data Description,Original Text,sta
 8,,Flowing Water,(minecraft:flowing_water),8,valid description
 9,,Still Water,(minecraft:water),9,valid description
 10,,Flowing Lava,(minecraft:flowing_lava),10,valid description
-11,,Still Lava,(minecraft:lava),11,needs research
+11,,Still Lava,(minecraft:lava),11,valid description
 12,,Sand,(minecraft:sand),12,needs research
 12,1.0,Red Sand,(minecraft:sand),12:01,needs research
 13,,Gravel,(minecraft:gravel),13,needs research
@@ -443,6 +443,6 @@ block_number,Meta Data,block_description,Meta Data Description,Original Text,sta
 253,,,,,needs research
 254,,,,,needs research
 255,,Structure Block,(minecraft:structure_block),255,needs research
-404,,Go do something productive,(fakeBlock:testingPurpose),404,needs research
-405,,Go do something productive,(fakeBlock:testingPurpose),405,doesn't exist
+404,,test block 1,(fakeBlock:testingPurpose),404,valid description
+405,,test block 2,(fakeBlock:testingPurpose),405,doesn't exist
 409,,test block 3,(fakeBlock:testingPurpose),409,my favorite color is twenty-seven

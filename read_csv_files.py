@@ -17,7 +17,7 @@ def get_block_description(block_number):
         if my_blocks_df["block_number"][i] == block_number:
             description = my_blocks_df["block_description"][i]
             status = my_blocks_df["status"][i]
-            print(description, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+            # print(description, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
             return description, status
     return "Go do something productive", "Doesn't exist"
 
