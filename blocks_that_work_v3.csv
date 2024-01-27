@@ -125,11 +125,11 @@ block_number,Meta Data,block_description,Meta Data Description,Original Text,sta
 57,,Diamond Block,(minecraft:diamond_block),57,needs research
 58,,Crafting Table,(minecraft:crafting_table),58,needs research
 59,,Wheat Crops,(minecraft:wheat),59,needs research
-60,,Farmland,(minecraft:farmland),60,needs research
-61,,Furnace,(minecraft:furnace),61,needs research
+60,,Farmland,(minecraft:farmland),60,valid description
+61,,Furnace,(minecraft:furnace),61,valid description
 62,,Burning Furnace,(minecraft:lit_furnace),62,needs research
-63,,Standing Sign Block,(minecraft:standing_sign),63,needs research
-64,,Oak Door Block,(minecraft:wooden_door),64,needs research
+63,,Standing Sign Block,(minecraft:standing_sign),63,valid description
+64,,Oak Door Block,(minecraft:wooden_door),64,valid description
 65,,Ladder,(minecraft:ladder),65,needs research
 66,,Rail,(minecraft:rail),66,needs research
 67,,Cobblestone Stairs,(minecraft:stone_stairs),67,needs research

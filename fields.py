@@ -21,7 +21,7 @@ def fish(x, y, z, offset_x, offset_z):
         mc.spawnEntity(x+3, y, z-3, 94)
 
 
-def farm(x, y, z, offset_x, offset_z):
+def farm(x, y, z, offset_x, offset_z, crop_type):
     # creates a farm
     crop_dict = {"wheat": 59, "beetroot": 207, "carrot": 141, "potato": 142}
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 60)
@@ -51,6 +51,15 @@ def plant_flowers(x, y, z, offset_x, offset_z):
             w = random.randint(0, 1)
             if w == 1:
                 mc.setBlock(x+i, y, z-j, int(flower_type[0]), int(flower_type[1]))
+
+
+def house(x, y, z, offset_x, offset_z):
+    mc.setBlocks(x, y, z, x+offset_x, y+4, z-offset_z, 5)           # Build box
+    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+4, z-offset_z+1, 0)   # Hollows box
+    mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 17)        # Builds roof
+    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 4)         # Builds floor
+    mc.setBlock(x, y, z-3, 64)                                      # Builds door
+    mc.setBlock(x, y+1, z-3, 64, 8)                                 # Builds door
 
 
 def fence(x, y, z, offset_x, offset_z):
@@ -100,3 +109,7 @@ if __name__ == "__main__":
     grass_field(x, y, z, offset_x, offset_z)
     fish(x, y, z, offset_x, offset_z)
     fence(x, y, z, offset_x, offset_z)
+
+    z = z - offset_z - 2
+    grass_field(x, y, z, offset_x, offset_z)
+    house(x, y, z, offset_x, offset_z)
