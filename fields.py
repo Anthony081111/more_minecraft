@@ -54,12 +54,28 @@ def plant_flowers(x, y, z, offset_x, offset_z):
 
 
 def house(x, y, z, offset_x, offset_z):
-    mc.setBlocks(x, y, z, x+offset_x, y+4, z-offset_z, 5)           # Build box
-    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+4, z-offset_z+1, 0)   # Hollows box
-    mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 17)        # Builds roof
-    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 4)         # Builds floor
-    mc.setBlock(x, y, z-3, 64)                                      # Builds door
-    mc.setBlock(x, y+1, z-3, 64, 8)                                 # Builds door
+    mc.setBlocks(x, y, z, x+offset_x, y+4, z-offset_z, 5)              # Build box
+    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+4, z-offset_z+1, 0)      # Hollows box
+    mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 17)           # Builds roof
+    mc.setBlocks(x+1, y+5, z-1, x+offset_x-1, y+5, z-offset_z+1, 123)  # Builds lamps
+    mc.setBlocks(x, y+6, z, x+offset_x, y+6, z-offset_z, 151)          # Powers lamps
+    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 4)            # Builds floor
+    mc.setBlock(x, y+1, z-3, 64, 8)                                    # Builds top of door
+    mc.setBlock(x, y, z-3, 64, 0)                                      # Builds bottom of door
+    mc.setBlock(x+1, y, z-3, 72)                                       # Builds door opener
+
+
+def storage(x, y, z, offset_x, offset_z):
+    mc.setBlocks(x, y, z, x+offset_x, y+4, z-offset_z, 5)              # Build box
+    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+4, z-offset_z+1, 0)      # Hollows box
+    mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 17)           # Builds roof
+    mc.setBlocks(x+1, y+5, z-1, x+offset_x-1, y+5, z-offset_z+1, 123)  # Builds lamps
+    mc.setBlocks(x, y+6, z, x+offset_x, y+6, z-offset_z, 151)          # Powers lamps
+    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 4)            # Builds floor
+    mc.setBlock(x, y+1, z-3, 64, 8)                                    # Builds top of door
+    mc.setBlock(x, y, z-3, 64, 0)                                      # Builds bottom of door
+    mc.setBlock(x+1, y, z-3, 72)                                       # Builds door opener
+    mc.setBlocks(x+1, y, z-offset_z+1, x+offset_x-1, y+3, z-offset_z+1, 54, 3)
 
 
 def fence(x, y, z, offset_x, offset_z):
@@ -113,3 +129,8 @@ if __name__ == "__main__":
     z = z - offset_z - 2
     grass_field(x, y, z, offset_x, offset_z)
     house(x, y, z, offset_x, offset_z)
+
+    x = x + offset_x + 2
+    grass_field(x, y, z, offset_x, offset_z)
+    storage(x, y, z, offset_x, offset_z)
+
