@@ -60,9 +60,24 @@ def house(x, y, z, offset_x, offset_z):
     mc.setBlocks(x+1, y+5, z-1, x+offset_x-1, y+5, z-offset_z+1, 123)  # Builds lamps
     mc.setBlocks(x, y+6, z, x+offset_x, y+6, z-offset_z, 151)          # Powers lamps
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 4)            # Builds floor
+    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y, z-offset_z+1, 171, 3)   # Builds carpet (light blue)
     mc.setBlock(x, y+1, z-3, 64, 8)                                    # Builds top of door
     mc.setBlock(x, y, z-3, 64, 0)                                      # Builds bottom of door
     mc.setBlock(x+1, y, z-3, 72)                                       # Builds door opener
+    mc.setBlock(x+offset_x-1, y, z-offset_z+1, 26, 10)                 # Builds top of bed
+    mc.setBlock(x+offset_x-1, y, z-offset_z+2, 26, 2)                  # Builds bottom of bed
+    mc.setBlocks(x, y+1, z-6, x, y+2, z-8, 20)
+    mc.setBlocks(x+2, y+1, z, x+3, y+2, z, 20)
+    mc.setBlocks(x+6, y+1, z, x+7, y+2, z, 20)
+    mc.setBlocks(x+2, y+1, z-offset_z, x+3, y+2, z-offset_z, 20)
+    mc.setBlocks(x+6, y+1, z-offset_z, x+7, y+2, z-offset_z, 20)
+
+
+def mineshaft_lighting(x, y, z):
+
+
+def mineshaft(x, y, z, offset_x, offset_y, offset_z):
+    mc.setBlocks(x-1, y, z, x+1, y+2, z-offset_z, 0)
 
 
 def storage(x, y, z, offset_x, offset_z):
@@ -130,6 +145,10 @@ if __name__ == "__main__":
     grass_field(x, y, z, offset_x, offset_z)
     house(x, y, z, offset_x, offset_z)
 
+    y -= 9
+    mineshaft(x, y, z, offset_x, 9, offset_z)
+
+    y += 9
     x = x + offset_x + 2
     grass_field(x, y, z, offset_x, offset_z)
     storage(x, y, z, offset_x, offset_z)
