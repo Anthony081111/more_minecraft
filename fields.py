@@ -74,6 +74,11 @@ def house(x, y, z, offset_x, offset_z):
 
 
 def mineshaft_lighting(x, y, z):
+    mc.setBlocks(x-1, y, z, x-1, y+1, z, 85)
+    mc.setBlocks(x+1, y, z, x+1, y+1, z, 85)
+    mc.setBlocks(x-1, y+2, z, x+1, y+2, z, 5)
+    mc.setBlock(x, y+2, z+1, 50)
+    mc.setBlock(x, y+2, z-1, 50)
 
 
 def mineshaft(x, y, z, offset_x, offset_y, offset_z):
