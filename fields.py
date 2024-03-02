@@ -14,6 +14,7 @@ def grass_field(x, y, z, offset_x, offset_z):
 
 def fish(x, y, z, offset_x, offset_z):
     # creates an artificial pond w/ fish
+    mc.removeEntities(94)
     mc.setBlocks(x+1, y-1, z-1, x+offset_x-1, y-3, z-offset_z+1, 9)
     mc.setBlocks(x, y-4, z, x+offset_x, y-4, z-offset_z, 3)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
@@ -33,6 +34,7 @@ def animals(x, y, z, offset_x, offset_z, animal_type):
     # creates a podzol field w/ animals
     # Pig = 90 Sheep = 91 Cow = 92 chicken = 93
     animal_dict = {"pig": 90, "sheep": 91, "cow": 92, "chicken": 93, "horse": 100, "donkey": 31, "mule": 32}
+    mc.removeEntities(animal_dict[animal_type])
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 3, 2)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
     for i in range(1, 6):
@@ -77,12 +79,26 @@ def mineshaft_lighting(x, y, z):
     mc.setBlocks(x-1, y, z, x-1, y+1, z, 85)
     mc.setBlocks(x+1, y, z, x+1, y+1, z, 85)
     mc.setBlocks(x-1, y+2, z, x+1, y+2, z, 5)
-    mc.setBlock(x, y+2, z+1, 50)
-    mc.setBlock(x, y+2, z-1, 50)
+    mc.setBlock(x, y+2, z+1, 50, 3)
+    mc.setBlock(x, y+2, z-1, 50, 4)
 
 
 def mineshaft(x, y, z, offset_x, offset_y, offset_z):
+    original_z = z
     mc.setBlocks(x-1, y, z, x+1, y+2, z-offset_z, 0)
+    mc.setBlocks(x+1, y, z-1, x+1, y+offset_y+1, z-1, 0)
+    mc.setBlocks(x+2, y, z, x+2, y+2, z-offset_z, 1)
+    mc.setBlocks(x-2, y, z, x-2, y+2, z-offset_z, 1)
+    for i in range(int(offset_z/3)):
+        gold_z = random.randint(0, 2)
+        gold_y = random.randint(0, 2)
+        mc.setBlock(x+2, y+gold_y, z-gold_z, 14)
+        gold_z = random.randint(0, 2)
+        gold_y = random.randint(0, 2)
+        mc.setBlock(x-2, y+gold_y, z-gold_z, 14)
+        mineshaft_lighting(x, y, z)
+        z -= 3
+    z = original_z
 
 
 def storage(x, y, z, offset_x, offset_z):
@@ -151,10 +167,14 @@ if __name__ == "__main__":
     house(x, y, z, offset_x, offset_z)
 
     y -= 9
+    offset_z += 20
+    offset_x += 20
     mineshaft(x, y, z, offset_x, 9, offset_z)
 
     y += 9
+    offset_z -= 20
+    offset_x -= 20
     x = x + offset_x + 2
-    grass_field(x, y, z, offset_x, offset_z)
-    storage(x, y, z, offset_x, offset_z)
-
+    storage_gen = input("Would you like to regenerate the storage?")
+    if storage_gen == "y":
+        storage(x, y, z, offset_x, offset_z)

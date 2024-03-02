@@ -20,15 +20,15 @@ while keep_going:
     for i in range(0, 10):
         x = x+2
         mc.setBlock(x, y, z, 0)                                      # Replace what is at location with a block of air
-        mc.setBlock(x, y, z, current_id)                             # Place a block with block number = current_id
-        invalid_block_id = True
-        while invalid_block_id:
-            try:
-                description, status = read_csv_files.get_block_description(current_id)
-                invalid_block_id = False
-            except:
-                current_id += 1
-                invalid_block_id = False
+        mc.setBlock(x, y, z, 50, current_id)                             # Place a block with block number = current_id
+        # invalid_block_id = True
+        # while invalid_block_id:
+        #     try:
+        #         description, status = read_csv_files.get_block_description(current_id)
+        #         invalid_block_id = False
+        #     except:
+        #         current_id += 1
+        #         invalid_block_id = False
         blocks_that_work.append(current_id)
         current_id += 1
     x = original_x
