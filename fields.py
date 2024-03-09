@@ -9,12 +9,12 @@ mc = Minecraft.create()
 def grass_field(x, y, z, offset_x, offset_z):
     # creates a grass field
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 2)
-    mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
+    mc.setBlocks(x, y, z, x+offset_x, y+20, z-offset_z, 0)
 
 
 def fish(x, y, z, offset_x, offset_z):
-    # creates an artificial pond w/ fish
-    mc.removeEntities(94)
+    # Creates an artificial pond w/ squid
+    mc.removeEntities(94)       # Removes previous squid
     mc.setBlocks(x+1, y-1, z-1, x+offset_x-1, y-3, z-offset_z+1, 9)
     mc.setBlocks(x, y-4, z, x+offset_x, y-4, z-offset_z, 3)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
@@ -34,7 +34,7 @@ def animals(x, y, z, offset_x, offset_z, animal_type):
     # creates a podzol field w/ animals
     # Pig = 90 Sheep = 91 Cow = 92 chicken = 93
     animal_dict = {"pig": 90, "sheep": 91, "cow": 92, "chicken": 93, "horse": 100, "donkey": 31, "mule": 32}
-    mc.removeEntities(animal_dict[animal_type])
+    mc.removeEntities(animal_dict[animal_type])       # Removes previous animals
     mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 3, 2)
     mc.setBlocks(x, y, z, x+offset_x, y, z-offset_z, 0)
     for i in range(1, 6):
@@ -42,6 +42,7 @@ def animals(x, y, z, offset_x, offset_z, animal_type):
 
 
 def plant_flowers(x, y, z, offset_x, offset_z):
+    # Plants flowers of a random type
     flowers = {'lilac': '175:1', 'blue orchid': '38:1', 'allium': '38:2', 'red tulip': '38:4', 'white tulip': '38:6',
                'rose bush': '175:4'}
     possible_flowers = list(flowers.keys())
@@ -56,6 +57,7 @@ def plant_flowers(x, y, z, offset_x, offset_z):
 
 
 def house(x, y, z, offset_x, offset_z):
+    # Builds a house
     mc.setBlocks(x, y, z, x+offset_x, y+4, z-offset_z, 5)              # Build box
     mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+4, z-offset_z+1, 0)      # Hollows box
     mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 17)           # Builds roof
@@ -75,7 +77,28 @@ def house(x, y, z, offset_x, offset_z):
     mc.setBlocks(x+6, y+1, z-offset_z, x+7, y+2, z-offset_z, 20)
 
 
+def village_house(x, y, z, offset_x, offset_z):
+    # Builds a smaller, more compact village house
+    mc.setBlocks(x, y, z, x+offset_x, y+3, z-offset_z, 5)              # Build box
+    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+3, z-offset_z+1, 0)      # Hollows box
+    mc.setBlocks(x, y+4, z, x+offset_x, y+4, z-offset_z, 17)           # Builds roof
+    mc.setBlocks(x+1, y+4, z-1, x+offset_x-1, y+4, z-offset_z+1, 123)  # Builds lamps
+    mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 151)          # Powers lamps
+    mc.setBlocks(x, y-1, z, x+offset_x, y-1, z-offset_z, 4)            # Builds floor
+    mc.setBlocks(x+1, y, z-1, x+offset_x-1, y, z-offset_z+1, 171, 3)   # Builds carpet (light blue)
+    mc.setBlock(x, y+1, z-3, 64, 8)                                    # Builds top of door
+    mc.setBlock(x, y, z-3, 64, 0)                                      # Builds bottom of door
+    mc.setBlock(x+1, y, z-3, 72)                                       # Builds door opener
+    mc.setBlock(x+offset_x-1, y, z-offset_z+1, 26, 10)                 # Builds top of bed
+    mc.setBlock(x+offset_x-1, y, z-offset_z+2, 26, 2)                  # Builds bottom of bed
+    mc.setBlocks(x+2, y+1, z, x+3, y+1, z, 20)
+    mc.setBlocks(x+offset_x, y+1, z-2, x+offset_x, y+1, z-3, 20)
+    mc.setBlocks(x+2, y+1, z-offset_z, x+3, y+1, z-offset_z, 20)
+    mc.spawnEntity(x+offset_x-1, y, z-offset_z+2, 120)
+
+
 def mineshaft_lighting(x, y, z):
+    # Lighting structures for the mineshaft
     mc.setBlocks(x-1, y, z, x-1, y+1, z, 85)
     mc.setBlocks(x+1, y, z, x+1, y+1, z, 85)
     mc.setBlocks(x-1, y+2, z, x+1, y+2, z, 5)
@@ -84,6 +107,7 @@ def mineshaft_lighting(x, y, z):
 
 
 def mineshaft(x, y, z, offset_x, offset_y, offset_z):
+    # Builds a mineshaft and adds gold to the outside of the mineshaft
     original_z = z
     mc.setBlocks(x-1, y, z, x+1, y+2, z-offset_z, 0)
     mc.setBlocks(x+1, y, z-1, x+1, y+offset_y+1, z-1, 0)
@@ -102,6 +126,7 @@ def mineshaft(x, y, z, offset_x, offset_y, offset_z):
 
 
 def storage(x, y, z, offset_x, offset_z):
+    # Builds a storage room with the same structure as the house but with chests
     mc.setBlocks(x, y, z, x+offset_x, y+4, z-offset_z, 5)              # Build box
     mc.setBlocks(x+1, y, z-1, x+offset_x-1, y+4, z-offset_z+1, 0)      # Hollows box
     mc.setBlocks(x, y+5, z, x+offset_x, y+5, z-offset_z, 17)           # Builds roof
@@ -178,3 +203,9 @@ if __name__ == "__main__":
     storage_gen = input("Would you like to regenerate the storage?")
     if storage_gen == "y":
         storage(x, y, z, offset_x, offset_z)
+
+    # sets up the village away from the main fields.
+    x = x - 2 * offset_x - 4
+    z = z - offset_z - 2
+    grass_field(x, y, z, offset_x, offset_z)
+    village_house(x, y, z, 5, 5)
